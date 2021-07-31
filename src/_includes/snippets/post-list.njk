@@ -1,0 +1,16 @@
+{% if postListItems.length %}
+<ol class="post-list grid columns-1 mxw-768" reversed>
+  {% for item in postListItems %}
+    {% if item.date.getTime() <= global.now %}
+      <li style="border:1px solid gray; padding:1rem;border-radius:4px;">
+        <a href="{{ item.url }}" rel="bookmark">
+              <h3 class="textColor-primary animated onscroll">{{ item.data.title }}</h3>
+              <p class="textColor-white animated onscroll">{{ item.data.excerpt }}</p>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ol>
+{% endif %}
+{{ content | safe }}
+{# {% include "partials/post/pagination.njk" %} #}

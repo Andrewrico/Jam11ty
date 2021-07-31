@@ -1,0 +1,6 @@
+{% set css %} 
+  {% include "./inlineCSS.css" %} 
+{% endset %}
+{% block css %}
+    <style>{{- css | cssmin | safe -}}</style>
+{% endblock %} 

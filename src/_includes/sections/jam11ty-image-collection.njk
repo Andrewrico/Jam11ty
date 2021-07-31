@@ -1,0 +1,18 @@
+{# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+#
+#
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set sectionId = "Image Collection" %}
+<section class="jam11ty-section{% if sectionId %}--{{- sectionId | lower | replace(' ', '-') -}}{% endif %} ">
+    <h2 class="grid__title">{{ sectionId }}</h2>
+    <ul class="grid__wrapper" style="--column-count: repeat(6, 1fr)">
+		{%- for item in metafields.brands -%}
+        <li class="grid__column">
+            {%- include "snippets/jam11ty-placeholder-image.njk" -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+</section>
+
+
+

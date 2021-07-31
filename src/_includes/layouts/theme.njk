@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ locale }}" class="no-js" dir="{{ dir }}">
+
+    <head>
+        {%- include "sections/head.njk" -%}
+        {{- content_for_head | safe -}}
+    </head>
+
+    <body id="template-{% if title %}{{- title | lower | replace(' ', '-') -}}{% else %}page{% endif %}">
+
+        <a class="skip-to-content visually-hidden" href="#main"> {{- theme.metadata.skip_to_text | safe }} </a>
+
+        {% include "sections/navigation.njk" %}
+        
+        {% include "sections/header.njk" %}
+
+        <main id="main" role="main" tabindex="-1">
+            {{- content_for_main | safe -}}
+        </main>
+
+        {%- include "sections/footer.njk" -%}
+
+        <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+        </script> 
+
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>
+    
+    </body>
+
+</html>

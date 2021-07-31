@@ -1,0 +1,51 @@
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+{% include "snippets/metadata.njk" %}
+
+<link rel="preload" href="/static/theme.css" as="style">
+
+<link rel="preload" href="/static/stylesheet.css" as="style">
+
+<link rel="stylesheet" type="text/css" media="all" href="/static/theme.css"/>
+
+<link rel="stylesheet" type="text/css" media="all" href="/static/stylesheet.css"/>
+
+{% include "assets/inlineCSS.njk" %}
+
+{% include "snippets/jam11ty-variables-set.njk" %}
+
+{% include "snippets/jam11ty-variables-css.njk" %}
+
+{% include "snippets/jam11ty-include-global.njk" %}
+
+{#  
+{% include "./schema.njk" %}
+<link rel="stylesheet" href="{{ 'component-list-menu.css' }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<style>
+    {{ settings.type_body_font | font_face: font_display: 'swap' }}
+    {{ body_font_bold | font_face: font_display: 'swap' }}
+    {{ body_font_italic | font_face: font_display: 'swap' }}
+    {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+    {{ settings.type_header_font | font_face: font_display: 'swap' }}
+    :root {
+    --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    --font-body-style: {{ settings.type_body_font.style }};
+    --font-body-weight: {{ settings.type_body_font.weight }};
+    }
+</style>
+{%- unless settings.fonts.type_body_font -%}
+    <link rel="preload" as="font" href="{{ settings.fonts.type_body_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}
+
+{%- unless settings.fonts.type_header_font -%}
+    <link rel="preload" as="font" href="{{ settings.fonts.type_header_font | font_url }}" type="font/woff2" crossorigin>
+{%- endunless -%}
+#}
+

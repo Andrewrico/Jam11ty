@@ -1,0 +1,21 @@
+{
+    "tag": [{
+            "text": "Home",
+            "url": "/",
+            "external": true,
+            "rel": "follow"
+        },
+        {
+            "text": "Learn",
+            "url": "/blog",
+            "external": false,
+            "rel": "follow"
+        },
+        {
+            "text": "Showcase",
+            "url": "/portfolio",
+            "external": false,
+            "rel": "follow"
+        }
+    ]
+}

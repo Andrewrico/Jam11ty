@@ -1,0 +1,20 @@
+
+{% set navType = "jam11ty" %}
+{% set sectionId = "navbar" %}
+
+<nav class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-') }}{% else %}--navbar  {% endif %} navbar" role="banner" style="--background:var(--color-secondary);--padding: 1rem;--text-color: white;"
+>
+    <ul class="navbar__menu">
+        <li class="navitem nav-logo">
+            <a href="/"> 
+              <h1 class="logo"> {{- site.name | safe -}} </h1>  
+            </a> 
+        </li>
+        <li class="navitem nav-link">
+            <a href="/">Home</a>
+        </li>
+        <li class="navitem nav-link">
+            <a href="/">Blog</a>
+        </li>
+    </ul>
+</nav>

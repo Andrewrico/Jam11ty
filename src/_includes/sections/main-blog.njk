@@ -1,0 +1,17 @@
+---
+{
+    "name": "blog"
+}
+---
+<section class="section">
+    <ul class="grid"> 
+        <li class="grid__row"> 
+            <div class="grid__cell"> 
+                {% include "snippets/post-list.njk" %}
+            </div>
+            <div class="grid__cell"> 
+                {% include "snippets/pagination.njk" %}
+            </div>
+        </li>
+    </ul>
+</section>

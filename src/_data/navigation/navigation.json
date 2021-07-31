@@ -1,0 +1,28 @@
+{
+  "items": [{
+    "text": "Home",
+    "url": "/",
+    "external": true,
+    "rel": "follow"
+  }, {
+    "text": "Headlesss E-Commerce",
+    "url": "/headlesss-ecommerce",
+    "external": false,
+    "rel": "follow"
+  }, {
+    "text": "Showcase",
+    "url": "/showcase",
+    "external": false,
+    "rel": "follow"
+  }, {
+    "text": "Blog",
+    "url": "/blog",
+    "external": false,
+    "rel": "follow"
+  }, {
+    "text": "Small Business",
+    "url": "/small business",
+    "external": false,
+    "rel": "follow"
+  }]
+}

@@ -1,0 +1,23 @@
+{
+  "key1": "value1",
+  "metadata": {
+    "skip_to_text": "Skip To Text"
+  },
+  "fonts": {
+    "font1": "font1",
+    "font2": "font2",
+    "font3": "font3"
+  },
+  "colors": {
+    "white": "white",
+    "black": "black",
+    "gray": "gray",
+    "primary": "primary",
+    "seconday": "seconday",
+    "tertiary": "tertiary"
+  },
+  "footer": {
+    "menus": true,
+    "metadata": ""
+  }
+}

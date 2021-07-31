@@ -1,0 +1,4 @@
+{
+    "layout": "templates/landing.njk",
+    "tags": "view_jam11ty"
+}

@@ -1,0 +1,16 @@
+{% set sectionId = "Hero Image With Text Lorem ipsum dolor sit amet" %}
+
+<section class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-')}}{% endif %}">    
+    <ul class="grid__wrapper" style="--column-count: 1fr 1fr;">
+        <li class="grid__column">
+            <div class="hero_content">
+                <h2>{{ sectionId }}</h2>
+                <p> Lorem ipsum dolor sit amet,  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis a ute irure dolor in reprehenderit in voluptate velit esse cillum non proident, suntin culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="button" href="/"> Downlaod Now</a>
+            </div>
+        </li>
+        <li class="grid__column">
+            {%- include "snippets/jam11ty-placeholder-image.njk" -%}
+        </li>
+    </ul>
+</section>

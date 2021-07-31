@@ -1,0 +1,8 @@
+{% set js %} 
+    {% include "./inlineJS.js" %} 
+{% endset %}
+{% block js %}
+    <script>{{- js | jsmin | safe -}}</script>
+{% endblock %} 
+
+

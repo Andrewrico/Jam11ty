@@ -1,0 +1,13 @@
+{
+  "items": [{
+      "text": "Term Of Services",
+      "url": "/term-of-services",
+      "external": false
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "/privacy-policy",
+      "external": false
+    }
+  ]
+}

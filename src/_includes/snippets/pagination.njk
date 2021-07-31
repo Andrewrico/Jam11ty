@@ -1,0 +1,22 @@
+{# {% set paginationLinkTokens = 'leading-tight text-500 weight-mid box-inline-flex align-center pad-bottom-300' %} #}
+{% if paginationNextUrl or paginationPrevUrl %}
+  <hr />
+  <div class="">
+    <footer class="">
+      <nav class="">
+        {% if paginationPrevUrl %}
+          <a href="{{ paginationPrevUrl }}" class="{{ paginationLinkTokens }}" data-direction="backwards">
+            <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+            {% include "static/arrow.svg" %}
+          </a>
+        {% endif %}
+        {% if paginationNextUrl %}
+          <a href="{{ paginationNextUrl }}" class="{{ paginationLinkTokens }}" data-direction="forwards">
+            <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+            {% include "static/arrow.svg" %}
+          </a>
+        {% endif %}
+      </nav>
+    </footer>
+  </div>
+{% endif %}
