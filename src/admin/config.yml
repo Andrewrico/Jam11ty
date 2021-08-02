@@ -94,7 +94,7 @@ collections:
             
 
       - label: "Tokens"
-        name: "theme"
+        name: "token"
         delete: false
         file: "src/_data/tokens.json"
         fields:
