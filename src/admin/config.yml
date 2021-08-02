@@ -85,15 +85,15 @@ collections:
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Is url to external site?", name: "external", widget: "boolean", required: false}
 
-      - label: "Settings for theme"
-        name: "settings_for_theme"
+      - label: "Theme Settings"
+        name: "theme"
         delete: false
         file: "src/_data/theme.json"
         fields: 
           - {label: "Light/Dark Mode", name: "mode", widget: "boolean", default: false}
             
 
-      - label: "Theme Settings"
+      - label: "Tokens"
         name: "theme"
         delete: false
         file: "src/_data/tokens.json"

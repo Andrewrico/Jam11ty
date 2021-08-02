@@ -1,43 +1,26 @@
 {
-  "mode": false,
   "fonts": {
-    "headlines": "Arial",
-    "body": "sans-serif"
+    "body": "sans-serif",
+    "nav": "inherit",
+    "headline": "inherit",
+    "paragraph": "inherit",
+    "link": "inherit"
   },
   "colors": {
+    "dark-mode": true,
     "white": "white",
     "black": "black",
+    "light": "light",
     "gray": "gray",
     "primary": "primary",
     "seconday": "seconday",
-    "tertiary": "tertiary"
-  },
-  "settings": {
-    "site": {
-      "option": "value"
-    },
-    "header": {
-      "option": "value"
-    },
-    "main": {
-      "option": "value"
-    },
-    "footer": {
-      "option": "value"
-    }
+    "tertiary": "tertiary",
+    "quaternary": "quaternary"
   },
   "metadata": {
-    "site": {
+    "key": "value",
+    "accesibility": {
       "skip_to_text": "Skip To Text"
-    },
-    "header": {
-      "option": "value"
-    },
-    "main": {
-      "option": "value"
-    },
-    "footer": {
-      "option": "value"
     }
   }
 }

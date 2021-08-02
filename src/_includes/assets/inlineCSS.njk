@@ -1,6 +1,24 @@
+{# 
+# Add CSS Files ::::::::::::::::::::::::::::::::::::::::::::
+#}
+
 {% set css %} 
   {% include "./inlineCSS.css" %} 
 {% endset %}
+
 {% block css %}
     <style>{{- css | cssmin | safe -}}</style>
 {% endblock %} 
+
+
+{# 
+# CMS Settings ::::::::::::::::::::::::::::::::::::::::::::
+#}
+
+{% if theme.mode == true %}
+<style>
+body {
+    background: green;
+}
+</style>
+{% endif %}
