@@ -1,12 +1,8 @@
 {
-  "key1": "value1",
-  "metadata": {
-    "skip_to_text": "Skip To Text"
-  },
+  "mode": false,
   "fonts": {
-    "font1": "font1",
-    "font2": "font2",
-    "font3": "font3"
+    "headlines": "Arial",
+    "body": "sans-serif"
   },
   "colors": {
     "white": "white",
@@ -16,8 +12,32 @@
     "seconday": "seconday",
     "tertiary": "tertiary"
   },
-  "footer": {
-    "menus": true,
-    "metadata": ""
+  "settings": {
+    "site": {
+      "option": "value"
+    },
+    "header": {
+      "option": "value"
+    },
+    "main": {
+      "option": "value"
+    },
+    "footer": {
+      "option": "value"
+    }
+  },
+  "metadata": {
+    "site": {
+      "skip_to_text": "Skip To Text"
+    },
+    "header": {
+      "option": "value"
+    },
+    "main": {
+      "option": "value"
+    },
+    "footer": {
+      "option": "value"
+    }
   }
 }

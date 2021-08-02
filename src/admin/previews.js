@@ -124,6 +124,25 @@ const SiteData = ({
   />
 );
 
+const ThemeOptions = ({
+  entry
+}) => ( <
+  Preview entry = {
+    entry
+  }
+  path = "layouts/theme.njk"
+  context = {
+    ({
+      mode
+    }) => ({
+      theme: {
+        mode
+      },
+    })
+  }
+  />
+);
+
 const Nav = ({
   entry
 }) => ( <
@@ -148,3 +167,4 @@ CMS.registerPreviewTemplate('posts', Post);
 CMS.registerPreviewTemplate('generic_pages', Page);
 CMS.registerPreviewTemplate('site_data', SiteData);
 CMS.registerPreviewTemplate('nav', Nav);
+CMS.registerPreviewTemplate('theme_options', ThemeOptions);

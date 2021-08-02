@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 publish_mode: editorial_workflow
-media_folder: "src/images"
-public_folder: "images"
+media_folder: "src/images/uploads"
+public_folder: "images/uploads"
 collections:
   - name: "pages"
     label: "Pages"
@@ -70,11 +70,12 @@ collections:
           - {label: "Show Theme Credit", name: "showThemeCredit", widget: "boolean", default: true}
           - {label: "Enable Third Party Comments Area", name: "enableThirdPartyComments", widget: "boolean", default: false}
           - {label: "Payment Pointer (Web Monetization: https://bit.ly/2kTRI1b)", name: "paymentPointer", widget: "string"}
+          - {label: "Avatart path (EG: /images/avatar.png)", name: "avatarPath", widget: "string"}
           - {label: "Favicon path (EG: /images/favicon.png)", name: "faviconPath", widget: "string"}
       - label: "Navigation"
         name: "nav"
         delete: false
-        file: "src/_data/navigation.json"
+        file: "src/_data/navigation/navigation.json"
         fields:
           - label: "Items"
             name: "items"
@@ -83,6 +84,15 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Is url to external site?", name: "external", widget: "boolean", required: false}
+
+      - label: "Settings for theme"
+        name: "settings_for_theme"
+        delete: false
+        file: "src/_data/theme.json"
+        fields: 
+          - {label: "Light/Dark Mode", name: "mode", widget: "boolean", default: false}
+            
+
       - label: "Theme Settings"
         name: "theme"
         delete: false
