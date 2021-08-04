@@ -1,26 +1,45 @@
 {
-  "fonts": {
-    "body": "sans-serif",
-    "nav": "inherit",
-    "headline": "inherit",
-    "paragraph": "inherit",
-    "link": "inherit"
-  },
-  "colors": {
-    "dark-mode": true,
-    "white": "white",
-    "black": "black",
-    "light": "light",
-    "gray": "gray",
-    "primary": "primary",
-    "seconday": "seconday",
-    "tertiary": "tertiary",
-    "quaternary": "quaternary"
+
+  "settings": {
+    "theme_mode": "light"
   },
   "metadata": {
     "key": "value",
     "accesibility": {
       "skip_to_text": "Skip To Text"
     }
+  },
+  "fonts": {
+    "body": "sans-serif",
+    "headline": "inherit",
+    "paragraph": "inherit"
+  },
+  "colors": {
+    "primary": "hsl(174, 100% , 50%)",
+    "secondary": "hsl(174, 100% , 36%)",
+    "tertiary": "hsl(180, 58% , 6%)",
+    "quaternary": "rgb(0, 0, 24)",
+    "orange": "hsl(39, 100% , 50%)",
+    "blue": "hsl(240, 100% , 50%)",
+    "red": "hsl(0, 100% , 50%)",
+    "green": "hsl(120, 100% , 25%)",
+    "white": "hsl(0, 0% , 100%)",
+    "black": "hsl(180, 27% , 2%)",
+    "light": "hsl(0, 0% , 98%)",
+    "dark": "hsl(180, 27% , 2%)",
+    "gray": "hsl(0, 0% , 50%)",
+    "lightgray": "hsl(192, 22% , 78%)",
+    "darkgray": "hsl(191, 27% , 62%)",
+    "link": "hsl(216, 100% , 37%)",
+    "linkState": "hsl(216, 100% , 45%)",
+    "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
+  },
+  "layout": {
+    "max_width": "1300px",
+    "gap": "16px"
+  },
+  "header": {
+    "backgroundColor": "#262626",
+    "height": "16px"
   }
 }

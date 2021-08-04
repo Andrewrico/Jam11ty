@@ -1,28 +1,25 @@
 {
 
-  "varKey": "value 1",
-
-  "cardCollectionFeatures": [{
+  "metafieldName": "metafieldValue",
+  "card": [{
     "headline": "Card One",
     "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   }, {
     "headline": "Card Twa",
     "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-  }, {
-    "headline": "Card Three",
-    "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   }],
   "brands": [{
-    "url": "/"
+    "src": "/",
+    "metadata": "image 1"
   }, {
-    "url": "/"
+    "src": "/",
+    "metadata": "image 2"
+  }],
+  "frequesntlyAskQuestion": [{
+    "question": "question 1",
+    "answer": "answer 1"
   }, {
-    "url": "/"
-  }, {
-    "url": "/"
-  }, {
-    "url": "/"
-  }, {
-    "url": "/"
+    "question": "question 2",
+    "answer": "answer 2"
   }]
 }

@@ -20,27 +20,8 @@ html {
 	line-height: 1.6;
 	font-size: 14.5px;
 	color: #262626;
-	--color-primary: hsl(174, 100%, 50%);
-	--color-secondary: hsl(174, 100%, 36%);
-	--color-tertiary: hsl(180, 58%, 6%);
-	--color-quaternary: rgb(0, 0, 24);
-	--color-orange: hsl(39, 100%, 50%);
-	--color-blue: hsl(240, 100%, 50%);
-	--color-red: hsl(0, 100%, 50%);
-	--color-green: hsl(120, 100%, 25%);
-	--color-white: hsl(0, 0%, 100%);
-	--color-black: hsl(180, 27%, 2%);
-	--color-light: hsl(0, 0%, 98%);
-	--color-dark: hsl(180, 27%, 2%);
-	--color-gray: hsl(0, 0%, 50%);
-	--color-lightgray: hsl(192, 22%, 78%);
-	--color-darkgray: hsl(191, 27%, 62%);
-	--color-link: hsl(216, 100%, 37%);
-	--color-link-state: hsl(216, 100%, 45%);
-	--box-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24);
-	--max-width: 1268px;
-}
 
+}
 
 
 body {

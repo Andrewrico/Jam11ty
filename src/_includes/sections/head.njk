@@ -10,16 +10,20 @@
 
 <link rel="stylesheet" type="text/css" media="all" href="/static/stylesheet.css"/>
 
+{% include "assets/css-variables.njk" %}
+
+{% include "assets/settings.njk" %}
+
 {% include "assets/inlineCSS.njk" %}
 
-{% include "snippets/jam11ty-variables-set.njk" %}
+{% include "snippets/globals.njk" %}
 
-{% include "snippets/jam11ty-variables-css.njk" %}
+{% include "snippets/schema.njk" %}
 
-{% include "snippets/jam11ty-include-global.njk" %}
+
 
 {#  
-{% include "./schema.njk" %}
+
 <link rel="stylesheet" href="{{ 'component-list-menu.css' }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -40,6 +44,7 @@
     --font-body-weight: {{ settings.type_body_font.weight }};
     }
 </style>
+
 {%- unless settings.fonts.type_body_font -%}
     <link rel="preload" as="font" href="{{ settings.fonts.type_body_font | font_url }}" type="font/woff2" crossorigin>
 {%- endunless -%}

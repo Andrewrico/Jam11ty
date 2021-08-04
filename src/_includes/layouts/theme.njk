@@ -2,8 +2,11 @@
 <html lang="{{ locale }}" class="no-js" dir="{{ dir }}">
 
     <head>
+
         {%- include "sections/head.njk" -%}
+
         {{- content_for_head | safe -}}
+        
     </head>
 
     <body id="template-{% if title %}{{- title | lower | replace(' ', '-') -}}{% else %}page{% endif %}">
