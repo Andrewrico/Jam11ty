@@ -93,22 +93,22 @@ collections:
             name: "settings"
             widget: "object"
             fields: 
-              - {label}
+                - {label: "settings", name: "settings", widget: "string", default: "settings"}
           - label: "Metadata"
             name: "metadata"
             widget: "object"
             fields: 
-              - {label}
+                - {label: "metadata", name: "metadata", widget: "string", default: "metadata"}
           - label: "Fonts"
             name: "fonts"
             widget: "object"
             fields: 
-              - {label}
+              - {label: "object", name: "object", widget: "string", default: "object"}
           - label: "Colors"
             name: "colors"
             widget: "object"
             fields: 
-              - {label: "Light/Dark Mode", name: "mode", widget: "boolean", default: false}
+              - {label: "Lightdark Mode", name: "mode", widget: "boolean", default: false}
               - {label: "Primary", name: "primary", widget: "color", default: "yellow"} 
               - {label: "Secondary", name: "secondary", widget: "color", default: "ble"} 
               - {label: "Tertiary", name: "tertiary", widget: "string", default: "red"} 
@@ -116,23 +116,22 @@ collections:
             name: "layouts"
             widget: "object"
             fields: 
-              - {label}
+              - {label: "layouts", name: "layouts", widget: "string", default: "layouts"}
           - label: "Header"
             name: "header"
             widget: "object"
             fields: 
-              - {label}
+              - {label: "header", name: "header", widget: "string", default: "header"}
           - label: "Main"
             name: "main"
             widget: "object"
             fields: 
-                            - {label: "footer", name: "footer", widget: "string", default: "footer"}
-
+              - {label: "main", name: "main", widget: "string", default: "main"}
           - label: "Footer"
             name: "footer"
             widget: "object"
             fields: 
-               - {label: "footer", name: "footer", widget: "string", default: "footer"}
+              - {label: "footer", name: "footer", widget: "string", default: "footer"}
       - label: "Tokens"
         name: "token"
         delete: false
