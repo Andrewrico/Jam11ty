@@ -84,15 +84,54 @@ collections:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Is url to external site?", name: "external", widget: "boolean", required: false}
-
       - label: "Theme Settings"
         name: "theme"
         delete: false
         file: "src/_data/theme.json"
         fields: 
-          - {label: "Light/Dark Mode", name: "mode", widget: "boolean", default: false}
-            
-
+          - label: "Settings"
+            name: "settings"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Metadata"
+            name: "metadata"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Fonts"
+            name: "fonts"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Colors"
+            name: "colors"
+            widget: "object"
+            fields: 
+              - {label: "Light/Dark Mode", name: "mode", widget: "boolean", default: false}
+              - {label: "Primary", name: "primary", widget: "color", default: "yellow"} 
+              - {label: "Secondary", name: "secondary", widget: "color", default: "ble"} 
+              - {label: "Tertiary", name: "tertiary", widget: "string", default: "red"} 
+          - label: "Layout"
+            name: "layouts"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Main"
+            name: "main"
+            widget: "object"
+            fields: 
+              - {label}
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields: 
+              - {label}
       - label: "Tokens"
         name: "token"
         delete: false

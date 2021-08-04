@@ -39,7 +39,12 @@
     "gap": "16px"
   },
   "header": {
-    "backgroundColor": "#262626",
-    "height": "16px"
+    "backgroundColor": "#262626"
+  },
+  "main": {
+    "backgroundColor": "#262626"
+  },
+  "footer": {
+    "backgroundColor": "#262626"
   }
 }
