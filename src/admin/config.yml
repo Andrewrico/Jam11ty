@@ -126,12 +126,13 @@ collections:
             name: "main"
             widget: "object"
             fields: 
-              - {label}
+                            - {label: "footer", name: "footer", widget: "string", default: "footer"}
+
           - label: "Footer"
             name: "footer"
             widget: "object"
             fields: 
-              - {label}
+               - {label: "footer", name: "footer", widget: "string", default: "footer"}
       - label: "Tokens"
         name: "token"
         delete: false
