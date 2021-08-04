@@ -7,7 +7,7 @@
 <section class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-')}}{% endif %} grid__section" style="--background:var(--color-secondary);">
     <h2 class="grid__title">{{ sectionId }}</h2>
     <ul class="grid__wrapper" style="--column-count: repeat(3, 1fr)">
-		{%- for item in metafields.cardCollectionFeatures -%}
+		{%- for item in metafields.card -%}
         <li class="grid__column">
             <div class="card">
                 {%- include "snippets/jam11ty-placeholder-image.njk" -%}   

@@ -110,13 +110,17 @@ collections:
             fields: 
               - {label: "Lightdark Mode", name: "mode", widget: "boolean", default: false}
               - {label: "Primary", name: "primary", widget: "color", default: "yellow"} 
-              - {label: "Secondary", name: "secondary", widget: "color", default: "ble"} 
+              - {label: "Secondary", name: "secondary", widget: "color", default: "blue"} 
               - {label: "Tertiary", name: "tertiary", widget: "string", default: "red"} 
           - label: "Layout"
             name: "layouts"
             widget: "object"
             fields: 
-              - {label: "layouts", name: "layouts", widget: "string", default: "layouts"}
+              - {label: "Grid Max Width", name: "max_width", widget: "select", options: ["1024px", "1268px", "1366px"], default: ["1268px"]}
+              - {label: "Grid Gap", name: "gap", widget: "select", options: 
+                - { label: "Small", value: "1rem" }
+                - { label: "Medium", value: "2rem" }
+                - { label: "Large", value: "4rem" }, default: ["1rem"]}
           - label: "Header"
             name: "header"
             widget: "object"

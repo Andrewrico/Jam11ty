@@ -307,9 +307,7 @@ p {
 	max-width: var(--max-width);
 	width: var(--width);
 	list-style: none;
-	--max-width: 1268px;
 	--width: 100%;
-	--gap: 1em;
 	--gutter: 0.5em;
 	--grid-sidebar: 300px;
 }

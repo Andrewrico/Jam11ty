@@ -7,10 +7,25 @@
   }, {
     "headline": "Card Twa",
     "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+  }, {
+    "headline": "Card Three",
+    "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   }],
   "brands": [{
     "src": "/",
     "metadata": "image 1"
+  }, {
+    "src": "/",
+    "metadata": "image 2"
+  }, {
+    "src": "/",
+    "metadata": "image 2"
+  }, {
+    "src": "/",
+    "metadata": "image 2"
+  }, {
+    "src": "/",
+    "metadata": "image 2"
   }, {
     "src": "/",
     "metadata": "image 2"
