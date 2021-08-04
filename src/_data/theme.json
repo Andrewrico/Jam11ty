@@ -6,7 +6,8 @@
   "metadata": {
     "key": "value",
     "accesibility": {
-      "skip_to_text": "Skip To Text"
+      "skip_to_text": "Skip To Text",
+      "scroll_up": "Scroll Up"
     }
   },
   "fonts": {

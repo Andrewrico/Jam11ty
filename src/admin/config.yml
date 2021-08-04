@@ -113,7 +113,7 @@ collections:
               - {label: "Secondary", name: "secondary", widget: "color", default: "blue"} 
               - {label: "Tertiary", name: "tertiary", widget: "string", default: "red"} 
           - label: "Layout"
-            name: "layouts"
+            name: "layout"
             widget: "object"
             fields: 
               - {label: "Grid Max Width", name: "max_width", widget: "select", options: ["1024px", "1268px", "1366px"], default: ["1268px"]}

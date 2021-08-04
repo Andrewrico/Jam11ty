@@ -11,7 +11,7 @@
 
     <body id="template-{% if title %}{{- title | lower | replace(' ', '-') -}}{% else %}page{% endif %}">
 
-        <a class="skip-to-content visually-hidden" href="#main"> {{- theme.metadata.skip_to_text | safe }} </a>
+        <a class="visually-hidden" href="#main" title="skip to content" id="{% if title %}{{- title | lower | replace(' ', '-') -}}{% endif %}"> {{- theme.metadata.accesibility.skip_to_text | safe }} </a>
 
         {% include "sections/navigation.njk" %}
         
@@ -43,6 +43,8 @@
             });
         }
         </script>
+
+        <a class="scrollup" href="#{% if title %}{{- title | lower | replace(' ', '-') -}}{% endif %}" title="scroll up"> {{- theme.metadata.accesibility.scroll_up | safe }} </a>
 
     </body>
 
