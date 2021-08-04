@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
   "settings": {
     "theme_mode": "light"
@@ -47,5 +48,65 @@
   },
   "footer": {
     "backgroundColor": "#262626"
+=======
+  "settings": {
+    "site": {
+      "option": "value"
+    },
+    "header": {
+      "option": "value"
+    },
+    "main": {
+      "option": "value"
+    },
+    "footer": {
+      "option": "value"
+    },
+    "settings": "fggg"
+  },
+  "mode": true,
+  "fonts": {
+    "headlines": "Arial",
+    "body": "sans-serif",
+    "object": "fg"
+  },
+  "layouts": {
+    "max_width": "1366px",
+    "gap": "4rem"
+  },
+  "header": {
+    "header": "header"
+  },
+  "metadata": {
+    "site": {
+      "skip_to_text": "Skip To Text"
+    },
+    "header": {
+      "option": "value"
+    },
+    "main": {
+      "option": "value"
+    },
+    "footer": {
+      "option": "value"
+    },
+    "metadata": "fggfg"
+  },
+  "colors": {
+    "white": "white",
+    "black": "black",
+    "gray": "gray",
+    "primary": "#2e27c3",
+    "seconday": "seconday",
+    "tertiary": "tertiary",
+    "mode": true,
+    "secondary": "#bf5959"
+  },
+  "main": {
+    "main": "main"
+  },
+  "footer": {
+    "footer": "foter"
+>>>>>>> bc5cc7d9e33c01d27feb86c92197304938827049
   }
 }
