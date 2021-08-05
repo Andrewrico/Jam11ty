@@ -17,7 +17,7 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
     {% endif %}
     <ul class="grid__wrapper" style="--column-count:1fr 1fr;"> 
         <li class="grid__column">
-            {%- include "snippets/jam11ty-logo.njk" -%}
+            {%- include "snippets/logo.njk" -%}
         </li>
     </ul>  
     <ul class="grid__wrapper" style="--column-count: 1fr"> 
@@ -25,13 +25,13 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
             <ul>
                 {%- if disclaimer.items -%}
                 {%- for item in disclaimer.items -%}
-                <li class="grid__cell">
+                <li>
                     <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
                 </li>
                 {%- endfor -%}
                 {%- endif -%}
                 <li>
-                    {%- include "snippets/jam11ty-copyright.njk" -%}
+                    {%- include "snippets/copyright.njk" -%}
                 </li>
             </ul>
         </li>
@@ -39,7 +39,7 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
     {% else %}
     <ul class="grid__wrapper" style="--column-count: 1fr"> 
         <li class="grid__column">
-            {%- include "snippets/jam11ty-copyright.njk" -%}
+            {%- include "snippets/copyright.njk" -%}
         </li>
     </ul>
 {% endif %}

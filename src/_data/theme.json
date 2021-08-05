@@ -49,6 +49,24 @@
         "backgroundColor": "#262626"
     },
     "footer": {
-        "backgroundColor": "#262626"
+        "id": "footer",
+        "className": "footer",
+        "backgroundColor": "#262626",
+        "paddingTopBottom": "4rem",
+        "columnCount": "4",
+        "columns": [{
+            "logo": true,
+            "link": false,
+            "text": "company logo"
+        }, {
+            "link": "/",
+            "text": "go to link 1"
+        }, {
+            "link": "/",
+            "text": "go to link 1"
+        }, {
+            "link": "/",
+            "text": "go to link 1"
+        }]
     }
 }

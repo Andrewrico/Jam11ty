@@ -57,14 +57,7 @@ body {
 	color: #000000;
 }
 
-/* Font */
-@font-face {
-	font-family: 'Jam11ty';
-	font-style: normal;
-	src: url('./theme.ttf');
-	text-rendering: optimizeLegibility;
-	font-display: swap;
-}
+
 
 /* Global */
 img {
