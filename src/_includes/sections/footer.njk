@@ -1,7 +1,6 @@
 {% set footerContent = false %}
 {% set sectionId = "footer" %}
 
-
 <footer class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-') }}{% else %}--footer{% endif %}" 
 role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--text-color: white;">
 {% if footerContent %}
@@ -18,9 +17,7 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
     {% endif %}
     <ul class="grid__wrapper" style="--column-count:1fr 1fr;"> 
         <li class="grid__column">
-            <div class="grid__cell">
             {%- include "snippets/jam11ty-logo.njk" -%}
-            </div>
         </li>
     </ul>  
     <ul class="grid__wrapper" style="--column-count: 1fr"> 
@@ -29,12 +26,12 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
                 {%- if disclaimer.items -%}
                 {%- for item in disclaimer.items -%}
                 <li class="grid__cell">
-                <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
+                    <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
                 </li>
                 {%- endfor -%}
                 {%- endif -%}
-                <li class="grid__cell">
-                {%- include "snippets/jam11ty-copyright.njk" -%}
+                <li>
+                    {%- include "snippets/jam11ty-copyright.njk" -%}
                 </li>
             </ul>
         </li>
@@ -42,10 +39,7 @@ role="contentinfo" style="--background:var(--color-tertiary);--padding: 2rem;--t
     {% else %}
     <ul class="grid__wrapper" style="--column-count: 1fr"> 
         <li class="grid__column">
-                <li class="grid__cell">
-                {%- include "snippets/jam11ty-copyright.njk" -%}
-                </li>
-            </ul>
+            {%- include "snippets/jam11ty-copyright.njk" -%}
         </li>
     </ul>
 {% endif %}

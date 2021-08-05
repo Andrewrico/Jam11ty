@@ -10,6 +10,7 @@ const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const CleanCSS = require("clean-css");
 
 module.exports = function (config11ty) {
+
     // Alias
     config11ty.addLayoutAlias('homepage', 'template/index.njk');
 

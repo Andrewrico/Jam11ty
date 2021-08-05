@@ -1,24 +1,26 @@
 <style>
+
 :root {
-    --color-primary: var(--color-theme-primary);
-	--color-secondary:var(--color-theme-secondary);
-	--color-tertiary:var(--color-theme-tertiary);
-	--color-quaternary: var(--color-theme-quaternary);
-	--color-orange: var(--color-theme-orange);
-	--color-blue: var(--color-theme-blue);
-	--color-red: var(--color-theme-red);
-	--color-green: var(--color-theme-green);
-	--color-white:var(--color-theme-white);
-	--color-black:var(--color-theme-black);
-	--color-light: var(--color-theme-light);
-	--color-dark:var(--color-theme-dark);
-	--color-gray: var(--color-theme-gray);
-	--color-lightgray: var(--color-theme-lightgray);
-	--color-darkgray:var(--color-theme-darkgray);
-	--color-link:var(--color-theme-link);
-	--color-link-state: var(--color-theme-link-state);
-	--color-shadow: var(--color-theme-shadow);
-	--max-width:var(--theme-max-width);
-	--gap:var(--theme-gap);
+    --color-theme-theme-primary: {{ theme.colors.primary }};
+	--color-theme-secondary: {{ theme.colors.secondary }};
+	--color-theme-tertiary:{{ theme.colors.tertiary }};
+	--color-theme-quaternary: {{ theme.colors.orange }};
+	--color-theme-orange: {{ theme.colors.orange }};
+	--color-theme-blue: {{ theme.colors.blue }};
+	--color-theme-red: {{ theme.colors.red }};
+	--color-theme-green: {{ theme.colors.green }};
+	--color-theme-white:{{ theme.colors.white }};
+	--color-theme-black:{{ theme.colors.black }};
+	--color-theme-light: {{ theme.colors.light }};
+	--color-theme-dark:{{ theme.colors.dark }};
+	--color-theme-gray: {{ theme.colors.gray }};
+	--color-theme-lightgray: {{ theme.colors.lightgray }};
+	--color-theme-darkgray:{{ theme.colors.darkgray }};
+	--color-theme-link: {{ theme.colors.link }};
+	--color-theme-link-state: {{ theme.colors.linkState }};
+	--color-theme-shadow: {{ theme.colors.shadow }};
+	--theme-max-width: {{ theme.layout.max_width }};
+	--theme-gap: {{ theme.layout.gap }};
+	
 }
 </style>

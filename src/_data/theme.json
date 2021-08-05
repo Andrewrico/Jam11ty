@@ -1,112 +1,54 @@
 {
-<<<<<<< HEAD
 
-  "settings": {
-    "theme_mode": "light"
-  },
-  "metadata": {
-    "key": "value",
-    "accesibility": {
-      "skip_to_text": "Skip To Text",
-      "scroll_up": "Scroll Up"
+    "theme": {
+        "settings": true,
+        "mode": "light"
+    },
+    "metadata": {
+        "key": "value",
+        "accesibility": {
+            "skip_to_content": "Skip To Text",
+            "scroll_up_page": "Scroll Up",
+            "refresh_page": "Refresh"
+        }
+
+    },
+    "fonts": {
+        "base": "sans-serif",
+        "headline": "inherit",
+        "regular": "inherit"
+    },
+    "colors": {
+        "primary": "hsl(174, 100% , 50%)",
+        "secondary": "hsl(174, 100% , 36%)",
+        "tertiary": "hsl(180, 58% , 6%)",
+        "quaternary": "rgb(0, 0, 24)",
+        "orange": "hsl(39, 100% , 50%)",
+        "blue": "hsl(240, 100% , 50%)",
+        "red": "hsl(0, 100% , 50%)",
+        "green": "hsl(120, 100% , 25%)",
+        "white": "hsl(0, 0% , 100%)",
+        "black": "hsl(180, 27% , 2%)",
+        "light": "hsl(0, 0% , 98%)",
+        "dark": "hsl(180, 27% , 2%)",
+        "gray": "hsl(0, 0% , 50%)",
+        "lightgray": "hsl(192, 22% , 78%)",
+        "darkgray": "hsl(191, 27% , 62%)",
+        "link": "hsl(216, 100% , 37%)",
+        "linkState": "hsl(216, 100% , 45%)",
+        "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
+    },
+    "layout": {
+        "max_width": "1268px",
+        "gap": "16px"
+    },
+    "header": {
+        "backgroundColor": "#262626"
+    },
+    "main": {
+        "backgroundColor": "#262626"
+    },
+    "footer": {
+        "backgroundColor": "#262626"
     }
-  },
-  "fonts": {
-    "body": "sans-serif",
-    "headline": "inherit",
-    "paragraph": "inherit"
-  },
-  "colors": {
-    "primary": "hsl(174, 100% , 50%)",
-    "secondary": "hsl(174, 100% , 36%)",
-    "tertiary": "hsl(180, 58% , 6%)",
-    "quaternary": "rgb(0, 0, 24)",
-    "orange": "hsl(39, 100% , 50%)",
-    "blue": "hsl(240, 100% , 50%)",
-    "red": "hsl(0, 100% , 50%)",
-    "green": "hsl(120, 100% , 25%)",
-    "white": "hsl(0, 0% , 100%)",
-    "black": "hsl(180, 27% , 2%)",
-    "light": "hsl(0, 0% , 98%)",
-    "dark": "hsl(180, 27% , 2%)",
-    "gray": "hsl(0, 0% , 50%)",
-    "lightgray": "hsl(192, 22% , 78%)",
-    "darkgray": "hsl(191, 27% , 62%)",
-    "link": "hsl(216, 100% , 37%)",
-    "linkState": "hsl(216, 100% , 45%)",
-    "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
-  },
-  "layout": {
-    "max_width": "1268px",
-    "gap": "16px"
-  },
-  "header": {
-    "backgroundColor": "#262626"
-  },
-  "main": {
-    "backgroundColor": "#262626"
-  },
-  "footer": {
-    "backgroundColor": "#262626"
-=======
-  "settings": {
-    "site": {
-      "option": "value"
-    },
-    "header": {
-      "option": "value"
-    },
-    "main": {
-      "option": "value"
-    },
-    "footer": {
-      "option": "value"
-    },
-    "settings": "fggg"
-  },
-  "mode": true,
-  "fonts": {
-    "headlines": "Arial",
-    "body": "sans-serif",
-    "object": "fg"
-  },
-  "layouts": {
-    "max_width": "1366px",
-    "gap": "4rem"
-  },
-  "header": {
-    "header": "header"
-  },
-  "metadata": {
-    "site": {
-      "skip_to_text": "Skip To Text"
-    },
-    "header": {
-      "option": "value"
-    },
-    "main": {
-      "option": "value"
-    },
-    "footer": {
-      "option": "value"
-    },
-    "metadata": "fggfg"
-  },
-  "colors": {
-    "white": "white",
-    "black": "black",
-    "gray": "gray",
-    "primary": "#2e27c3",
-    "seconday": "seconday",
-    "tertiary": "tertiary",
-    "mode": true,
-    "secondary": "#bf5959"
-  },
-  "main": {
-    "main": "main"
-  },
-  "footer": {
-    "footer": "foter"
->>>>>>> bc5cc7d9e33c01d27feb86c92197304938827049
-  }
 }
