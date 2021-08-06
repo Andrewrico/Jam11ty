@@ -3,6 +3,7 @@
 #}
 
 {% set css %} 
+  {% include "./settings.njk" %} 
   {% include "./inlineCSS.css" %} 
 {% endset %}
 
@@ -11,14 +12,3 @@
 {% endblock %} 
 
 
-{# 
-# CMS Settings ::::::::::::::::::::::::::::::::::::::::::::
-#}
-
-{% if theme.mode == true %}
-<style>
-body {
-    background: green;
-}
-</style>
-{% endif %}

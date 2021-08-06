@@ -1,0 +1,34 @@
+
+
+<article class="">
+
+    <div class="{{ 'pad-bottom-900' if not site.enableThirdPartyComments }}">
+    {{ content | safe }}
+    </div>
+
+    {% if site.enableThirdPartyComments %}
+    <hr />
+    <aside>
+        {% include "partials/global/third-party-comments.njk" %}
+    </aside>
+    {% endif %}
+
+    {% if tags %}
+    <footer class="">
+        <div class="">
+        <div class="">
+            <h2 class="">Filed under</h2>
+            <ul class="">
+            {% for item in tags %}
+                <li class="">
+                <a href="/tags/{{ item }}">{{ item }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        </div>
+    </footer>
+    {% endif %}
+</article>
+
+

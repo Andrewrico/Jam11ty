@@ -24,6 +24,23 @@ module.exports = function (config11ty) {
     config11ty.addPassthroughCopy('src/admin/previews.js');
     config11ty.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
 
+
+    const now = new Date();
+
+    // Custom collections
+    const livePosts = post => post.date <= now && !post.data.draft;
+    config11ty.addCollection('posts', collection => {
+        return [
+            ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
+        ].reverse();
+    });
+
+    config11ty.addCollection('postFeed', collection => {
+        return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
+            .reverse()
+            .slice(0, site.maxPostsPerPage);
+    });
+
     // Plugin
     config11ty.addPlugin(rssPlugin);
     config11ty.addPlugin(syntaxHighlight);

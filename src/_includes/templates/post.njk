@@ -1,0 +1,40 @@
+
+
+{# SET_SECTION_DATA :::::::::::::::::::::::::::::::: #}
+---
+{
+    "templateName": "{{ title }}",
+    "loop":  [{
+        "key1": "value2",
+        },{
+        "key2": "value2",
+    }]
+}
+---
+
+{# SET_TEMPLATE :::::::::::::::::::::::::::::::::::::: #}
+
+{%- set content_for_banner -%}
+
+{%- endset -%}
+
+{%- set content_for_main -%}
+    {%- include "sections/main-post.njk" -%}
+{%- endset -%}
+
+{# GET_TEMPLATE :::::::::::::::::::::::::::::::::::::: #}
+
+{%- extends 'layouts/theme.njk' -%}
+
+{% block content_for_banner %}
+    {{ content_for_banner | safe }}
+{% endblock -%}
+
+{% block content_for_main %}
+    {{ content_for_main | safe }}
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,7 @@
+{
+  "items": [{
+    "text": "Home",
+    "url": "/",
+    "external": true
+  }]
+}

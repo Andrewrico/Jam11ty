@@ -6,29 +6,6 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--color-primary: var(--color-theme-primary);
-	--color-secondary: var(--color-theme-secondary);
-	--color-tertiary: var(--color-theme-tertiary);
-	--color-quaternary: var(--color-theme-quaternary);
-	--color-orange: var(--color-theme-orange);
-	--color-blue: var(--color-theme-blue);
-	--color-red: var(--color-theme-red);
-	--color-green: var(--color-theme-green);
-	--color-white: var(--color-theme-white);
-	--color-black: var(--color-theme-black);
-	--color-light: var(--color-theme-light);
-	--color-dark: var(--color-theme-dark);
-	--color-gray: var(--color-theme-gray);
-	--color-lightgray: var(--color-theme-lightgray);
-	--color-darkgray: var(--color-theme-darkgray);
-	--color-link: var(--color-theme-link);
-	--color-link-state: var(--color-theme-link-state);
-	--color-shadow: var(--color-theme-shadow);
-	--max-width: var(--theme-max-width);
-	--gap: var(--theme-gap);
-}
-
 html {
 	font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe Emoji", "Helvetica Neue";
 }
@@ -46,7 +23,6 @@ html {
 
 }
 
-
 body {
 	height: 100%;
 	text-rendering: optimizeSpeed;
@@ -57,9 +33,14 @@ body {
 	color: #000000;
 }
 
+@font-face {
+	font-family: 'Jam11ty';
+	font-style: normal;
+	src: url('./theme.ttf');
+	text-rendering: optimizeLegibility;
+	font-display: swap;
+}
 
-
-/* Global */
 img {
 	display: block;
 	height: auto;
@@ -84,7 +65,6 @@ ul {
 	list-style: none;
 	margin: 0;
 }
-
 
 nav ul li {
 	margin: 0;
@@ -157,6 +137,8 @@ p {
 	font-weight: 300;
 }
 
+
+
 .visually-hidden {
 	width: 0;
 	height: 0;
@@ -171,9 +153,9 @@ p {
 
 /* ========== HEADER START ========== */
 
-.header {
+/* .header {
 	background: var(--color-secondary);
-}
+} */
 
 
 /* ========== HEADER END ============ */
@@ -570,7 +552,7 @@ button {
 }
 
 
-.jam11ty.image-placeholder {
+.image-placeholder {
 	width: 100%;
 	height: 0;
 	padding-top: 100%;
@@ -579,7 +561,7 @@ button {
 	position: relative;
 }
 
-.jam11ty.image-placeholder>span {
+.image-placeholder>span {
 	height: 100%;
 	width: 100%;
 	background: url(./mountains.svg);
@@ -593,7 +575,7 @@ button {
 
 /* navbar */
 
-.navbar {
+/* .navbar {
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -625,7 +607,7 @@ button {
 	font-size: 24px;
 	margin: 0;
 	padding: 0;
-}
+} */
 
 
 /* accesibility */
@@ -637,3 +619,6 @@ button {
 	align-items: center;
 	gap: 1rem;
 }
+
+
+/* section */

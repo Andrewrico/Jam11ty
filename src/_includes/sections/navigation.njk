@@ -1,20 +1,28 @@
 
-{% set navType = "jam11ty" %}
-{% set sectionId = "navbar" %}
+  <nav class="jam11ty-section--navbar">
+    <div class="navbar" role="navigation"  aria-label="{{ aria }}">
+      <div class="navbar__logo">
+        <h1>{{ site.name }}</h1>
+      </div>
+      {% if menus.main %}
+      <ul class="navbar__menu">
+        {% for item in menus.main %}
+          {% set relAttribute = '' %}
+          {% set currentAttribute = '' %}
 
-<nav class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-') }}{% else %}--navbar  {% endif %} navbar" role="navigation" style="--background:var(--color-secondary);--padding: 1rem;--text-color: white;"
->
-    <ul class="navbar__menu">
-        <li class="navitem nav-logo">
-            <a href="/"> 
-              <h1 class="logo"> {{- site.name | safe -}} </h1>  
-            </a> 
-        </li>
-        <li class="navitem nav-link">
-            <a href="/">Home</a>
-        </li>
-        <li class="navitem nav-link">
-            <a href="/">Blog</a>
-        </li>
-    </ul>
-</nav>
+          {% if item.rel %}
+            {% set relAttribute = ' rel="' + item.rel + '"' %}
+          {% endif %}
+
+          {% if page.url == item.url %}
+            {% set currentAttribute = ' aria-current="page"' %}
+          {% endif %}
+
+          <li>
+            <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    </div>
+  </nav>

@@ -1,0 +1,47 @@
+{
+    "main": [{
+        "text": "Home",
+        "url": "/",
+        "external": true
+    }, {
+        "text": "Blog",
+        "url": "/blog",
+        "external": false
+    }],
+    "support": [{
+        "text": "Link 1",
+        "url": "/link-1",
+        "external": true
+    }, {
+        "text": "Link 2",
+        "url": "/link-2",
+        "external": false
+    }],
+    "learn": [{
+        "text": "Link 1",
+        "url": "/link-1",
+        "external": true
+    }, {
+        "text": "Link 2",
+        "url": "/link-2",
+        "external": false
+    }],
+    "social": [{
+        "text": "Link 1",
+        "url": "/link-1",
+        "external": true
+    }, {
+        "text": "Link 2",
+        "url": "/link-2",
+        "external": false
+    }],
+    "disclaimers": [{
+        "text": "Link 1",
+        "url": "/link-1",
+        "external": true
+    }, {
+        "text": "Link 2",
+        "url": "/link-2",
+        "external": false
+    }]
+}

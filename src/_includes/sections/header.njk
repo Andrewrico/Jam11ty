@@ -1,5 +1,5 @@
-{% set sectionId = "header" %}
-<header class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-') }}{% else %}--header{% endif %} header" role="banner" style="--background:var(--color-secondary);--padding: 4rem;--text-color: white;">
-    {{ content_for_banner | safe }}
+<header class="jam11ty-section--header" role="banner">
+    <div class="header">
+        {{ content_for_banner | safe }}
+    </div>
 </header>
-

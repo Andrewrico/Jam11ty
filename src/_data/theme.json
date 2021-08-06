@@ -7,7 +7,7 @@
     "metadata": {
         "key": "value",
         "accesibility": {
-            "skip_to_content": "Skip To Text",
+            "skip_to_content": "Skip To Content",
             "scroll_up_page": "Scroll Up",
             "refresh_page": "Refresh"
         }
@@ -42,8 +42,23 @@
         "max_width": "1268px",
         "gap": "16px"
     },
+    "nav": {
+        "background": "black",
+        "color": "white",
+        "padding": "2rem",
+        "maxWidth": "1268px",
+        "justify": "space-between",
+        "menu": {
+            "color": "white",
+            "fontSize": "24px!important",
+            "fontWeight": "bold"
+        }
+    },
     "header": {
-        "backgroundColor": "#262626"
+        "background": "black",
+        "color": "white",
+        "linkColor": "white",
+        "padding": "2rem"
     },
     "main": {
         "backgroundColor": "#262626"
@@ -53,20 +68,6 @@
         "className": "footer",
         "backgroundColor": "#262626",
         "paddingTopBottom": "4rem",
-        "columnCount": "4",
-        "columns": [{
-            "logo": true,
-            "link": false,
-            "text": "company logo"
-        }, {
-            "link": "/",
-            "text": "go to link 1"
-        }, {
-            "link": "/",
-            "text": "go to link 1"
-        }, {
-            "link": "/",
-            "text": "go to link 1"
-        }]
+        "columnCount": "4"
     }
 }
