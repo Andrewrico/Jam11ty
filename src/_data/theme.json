@@ -4,6 +4,8 @@
         "settings": true,
         "mode": "light"
     },
+
+
     "metadata": {
         "key": "value",
         "accesibility": {
@@ -13,11 +15,14 @@
         }
 
     },
+
     "fonts": {
         "base": "sans-serif",
         "headline": "inherit",
         "regular": "inherit"
     },
+
+
     "colors": {
         "primary": "hsl(174, 100% , 50%)",
         "secondary": "hsl(174, 100% , 36%)",
@@ -38,10 +43,12 @@
         "linkState": "hsl(216, 100% , 45%)",
         "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
     },
+
     "layout": {
         "max_width": "1268px",
         "gap": "16px"
     },
+
     "nav": {
         "background": "black",
         "color": "white",
@@ -50,10 +57,21 @@
         "justify": "space-between",
         "menu": {
             "color": "white",
-            "fontSize": "24px!important",
-            "fontWeight": "bold"
+            "fontSize": "24px",
+            "fontWeight": "bold",
+            "gap": "2rem",
+            "primary": {
+                "align": "flex-end"
+            },
+            "secondary": {
+                "align": "center"
+            },
+            "tertiary": {
+                "align": "center"
+            }
         }
     },
+
     "header": {
         "background": "black",
         "color": "white",

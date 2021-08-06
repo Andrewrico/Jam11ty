@@ -7,6 +7,28 @@
         "text": "Blog",
         "url": "/blog",
         "external": false
+    }, {
+        "text": "Buy Now",
+        "url": "/",
+        "external": true
+    }],
+    "secondary": [{
+        "text": "Home",
+        "url": "/",
+        "external": true
+    }, {
+        "text": "Blog",
+        "url": "/blog",
+        "external": false
+    }],
+    "tertiary": [{
+        "text": "Buy Now",
+        "url": "/",
+        "external": true
+    }, {
+        "text": "Blog",
+        "url": "/blog",
+        "external": false
     }],
     "support": [{
         "text": "Link 1",

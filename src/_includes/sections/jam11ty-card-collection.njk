@@ -4,7 +4,7 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
 {% set sectionId = "Card Collection" %}
 
-<section class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-')}}{% endif %}" style="--background:var(--color-secondary);">
+<section class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-')}}{% endif %}" style="--background:var(--color-black);">
     <h2 class="grid__title">{{ sectionId }}</h2>
     <ul class="grid__wrapper" style="--column-count: repeat(3, 1fr)">
 		{%- for item in metafields.card -%}

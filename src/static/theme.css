@@ -177,8 +177,7 @@ p {
 /* ========== FOOTER END ============ */
 
 /* ========== HELPERS START ========== */
-[class*="+"] {
-
+span[super] {
 	/* gen */
 	--display: inherit;
 	--justify: inherit;
