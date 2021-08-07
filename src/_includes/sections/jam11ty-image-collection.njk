@@ -19,6 +19,9 @@
 
 {# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
 <section id="jam11ty-section-image-collection" class="section-image-collection" {% if section.background or section.color %} style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};"{% endif %}>
+    <h2 class="grid__title">
+      <span>{{ section.title  }}</span>
+    </h2>
     <ul class="grid__wrapper" style="{{ section.grid  }}">
 	   {{ wrapper | safe }} 
     </ul>
