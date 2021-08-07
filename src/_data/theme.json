@@ -1,11 +1,8 @@
 {
-
     "theme": {
         "settings": true,
         "mode": "light"
     },
-
-
     "metadata": {
         "key": "value",
         "accesibility": {
@@ -13,16 +10,12 @@
             "scroll_up_page": "Scroll Up",
             "refresh_page": "Refresh"
         }
-
     },
-
     "fonts": {
         "base": "sans-serif",
         "headline": "inherit",
         "regular": "inherit"
     },
-
-
     "colors": {
         "primary": "hsl(174, 100% , 50%)",
         "secondary": "hsl(174, 100% , 36%)",
@@ -43,17 +36,15 @@
         "linkState": "hsl(216, 100% , 45%)",
         "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
     },
-
     "layout": {
         "max_width": "1268px",
         "gap": "16px"
     },
-
     "nav": {
         "background": "black",
         "color": "white",
         "padding": "2rem",
-        "maxWidth": "1268px",
+        "maxWidth": "",
         "justify": "space-between",
         "menu": {
             "color": "white",
@@ -71,7 +62,6 @@
             }
         }
     },
-
     "header": {
         "background": "black",
         "color": "white",
@@ -82,10 +72,11 @@
         "backgroundColor": "#262626"
     },
     "footer": {
-        "id": "footer",
-        "className": "footer",
-        "backgroundColor": "#262626",
-        "paddingTopBottom": "4rem",
-        "columnCount": "4"
+        "wrapper": true,
+        "copyright": true,
+        "padding": "2rem",
+        "background": "var(--color-black)",
+        "color": "white"
     }
+
 }

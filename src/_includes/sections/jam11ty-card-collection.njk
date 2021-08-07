@@ -1,21 +1,32 @@
-{# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-#
-#  
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-{% set sectionId = "Card Collection" %}
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{%- set section = { 
+        title: 'Card Collection',
+        background: 'var(--color-black)',
+        color: 'white',
+        itemcolor: 'black',
+        grid: '--column-count: repeat(3, 1fr)'   
+    }
+-%}
 
-<section class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-')}}{% endif %}" style="--background:var(--color-black);">
-    <h2 class="grid__title">{{ sectionId }}</h2>
-    <ul class="grid__wrapper" style="--column-count: repeat(3, 1fr)">
-		{%- for item in metafields.card -%}
-        <li class="grid__column">
-            <div class="card">
-                {%- include "snippets/placeholder-image.njk" -%}   
-                <h3>{{ item.headline}}</h3>
-                <p>{{ item.desciption}}</p>
-            </div>
-        </li>
-        {%- endfor -%}
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set wrapper %}
+    {%- for item in metafields.card -%}
+    <li class="grid__column">
+        <div class="card">
+            {%- include "snippets/placeholder-image.njk" -%}   
+            <h3 style="color: black;">{{ item.headline}}</h3>
+            <p style="color: black;">{{ item.desciption}}</p>
+        </div>
+    </li>
+    {%- endfor -%}
+{% endset %}
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<section id="jam11ty-section-card-collection" class="section-card-collection" {% if section.background or section.color %}style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};{% endif %}">
+    <h2 class="grid__title">
+      <span>{{ section.title  }}</span>
+    </h2>
+    <ul class="grid__wrapper" style="{{ section.grid  }}">
+	   {{ wrapper | safe }} 
     </ul>
 </section>
-

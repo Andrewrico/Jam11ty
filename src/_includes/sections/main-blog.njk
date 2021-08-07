@@ -1,7 +1,14 @@
-{% set postListItems = collections.postFeed %}
 
-<section class="section">
-    <ul class="grid"> 
+{# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+# Image With Text
+#  
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+
+{% set postListItems = collections.postFeed %}
+<section class="section-main-blog"> 
+    <ul class="grid__wrapper"> 
         <li class="grid__column"> 
             <div class="grid__cell"> 
                 {% include "snippets/post-list.njk" %}

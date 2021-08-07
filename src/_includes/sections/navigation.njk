@@ -1,7 +1,7 @@
 
   
 
-<nav class="navbar-component" role="navigation" aria-label="{{ aria }}">
+<nav class="component-navbar" role="navigation" aria-label="{{ aria }}">
   <ul class="navbar_wrapper">
     <li class="navbar__logo">
       <h1>
@@ -69,86 +69,3 @@
     </li>
   </ul>
 </nav>
-
-<style>
-.navbar-component {
-    --nav-background: {{ theme.nav.background }};
-    --nav-max-width: {{ theme.nav.maxWidth }};
-    --nav-justify-content: {{ theme.nav.justify }};
-    --nav-padding: {{ theme.nav.padding }};
-    --nav-link-color: {{ theme.nav.color }};
-    --nav-menu-link-color: {{ theme.nav.menu.color }};
-    --nav-menu-link-fontSize: {{ theme.nav.menu.fontSize }};
-    --nav-menu-link-fontWeight: {{ theme.nav.menu.fontWeight }};
-    --nav-menu-gap: {{ theme.nav.menu.gap }};
-    --nav-menu-primary-align: {{ theme.nav.menu.primary.align }};
-    --nav-menu-secondary-align: {{ theme.nav.menu.secondary.align }};
-    --nav-menu-tertiary-align: {{ theme.nav.menu.tertiary.align }};
-}
-
-.navbar-component {
-    width:100%;
-    padding:0;
-    background: var(--nav-background);
-}
-
-.navbar_wrapper {
-    margin:0 auto;
-    width:100%;
-    max-width: var(--nav-max-width);
-    justify-content:var(--nav-justify-content);
-    display:flex;
-    align-items:center;
-    flex: 1;
-	  padding: var(--nav-padding) 0;
-}
-
-.navbar_wrapper a{
-	color: var(--nav-link-color);
-}
-
-.navbar__logo{
-  flex: 1;
-}
-.navbar__logo h1 {
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	color: white;
-	white-space: nowrap;
-}
-
-
-.navbar__menu {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-  flex: 2;
-}
-
-.navbar_wrapper .navbar__menu ul{
-    width:100%;
-    display:flex;
-    align-items:center;
-    gap:var(--nav-menu-gap);
-}
-.navbar__menu .menu-primary {
-  justify-content:var(--nav-menu-primary-align);
-
-}
-
-.navbar__menu .menu-secondary {
-  justify-content:var(--nav-menu-secondary-align);
-}
-
-.navbar__menu .menu-tertiary {
-  justify-content:var(--nav-menu-tertiary-align);
-}
-
-.navbar_wrapper .navbar__menu  a{
-	color: var(--nav-menu-link-color);
-	font-size: var(--nav-menu-link-fontSize);
-	font-weight: var(--nav-menu-link-fontWeight);
-}
-
-</style>

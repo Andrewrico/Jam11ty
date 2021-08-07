@@ -275,7 +275,7 @@ span[super] {
 /* ========== GRID START ========== */
 
 /* Grid */
-[class*="jam11ty-section"] {
+/* [class*="section-"] {
 	--padding: 4rem;
 	--background: unset;
 	--text-color: unset;
@@ -288,7 +288,7 @@ span[super] {
 
 [class*="jam11ty-section"] * {
 	color: var(--text-color);
-}
+} */
 
 
 .grid__title {
@@ -621,3 +621,24 @@ button {
 
 
 /* section */
+
+
+
+/* link-arrow */
+
+.link {
+	display: inline-flex;
+	cursor: pointer;
+	font-size: 24px;
+	font-family: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	color: var(--color-link)
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+	color: var(--color-link-state)
+}

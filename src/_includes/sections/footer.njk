@@ -1,51 +1,87 @@
-{% set footerContent = false %}
-{% set sectionId = "footer" %}
-
-<footer class="jam11ty-section{% if sectionId %}--{{ sectionId | lower | replace(' ', '-') }}{% else %}--footer{% endif %}" 
-role="contentinfo" style="--background:var(--color-black);--padding: 2rem;--text-color: white;">
-{% if footerContent %}
-    {% if theme.footer.menus %}
-    {% for item in theme.footer_menus.menu %}
-    <ul class="grid__wrapper" style="--column-count: 1fr">
-        {% for footer_menus in menu %}
+<footer class="component-footer" role="contentinfo" aria-label="{{ aria }}">
+  {% if theme.footer.wrapper == true %}
+  <ul class="grid__wrapper footer__top" style="--column-count: repeat(4, 1fr)">
+    <li>
+        <ul>
+        {%- if menus.main -%}
+        {%- for item in menus.main -%}
         <li>
-            <a href="{{ item.url }}">{{ item.text }}</a>
+            <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
         </li>
-        {% endfor %}
-    </ul>
-    {% endfor %}
-    {% endif %}
-    <ul class="grid__wrapper" style="--column-count:1fr 1fr;"> 
-        <li class="grid__column">
-            {%- include "snippets/logo.njk" -%}
+        {%- endfor -%}
+        {%- endif -%}
+        </ul>
+    </li>
+    <li>
+        <ul>
+        {%- if menus.learn -%}
+        {%- for item in menus.learn -%}
+        <li>
+            <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
         </li>
-    </ul>  
-    <ul class="grid__wrapper" style="--column-count: 1fr"> 
-        <li class="grid__column">
-            <ul>
-                {%- if disclaimer.items -%}
-                {%- for item in disclaimer.items -%}
-                <li>
-                    <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
-                </li>
-                {%- endfor -%}
-                {%- endif -%}
-                <li>
-                    {%- include "snippets/copyright.njk" -%}
-                </li>
-            </ul>
+        {%- endfor -%}
+        {%- endif -%}
+        </ul>
+    </li>
+    <li>
+        <ul>
+        {%- if menus.support -%}
+        {%- for item in menus.support -%}
+        <li>
+            <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
         </li>
-    </ul>
-    {% else %}
-    <ul class="grid__wrapper" style="--column-count: 1fr"> 
-        <li class="grid__column">
-            {%- include "snippets/copyright.njk" -%}
+        {%- endfor -%}
+        {%- endif -%}
+        </ul>
+    </li>
+    <li>
+        <ul>
+        {%- if menus.social -%}
+        {%- for item in menus.social -%}
+        <li>
+            <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
         </li>
-    </ul>
-{% endif %}
+        {%- endfor -%}
+        {%- endif -%}
+        </ul>
+    </li>
+  </ul>
+  {% endif %}
+  {% if theme.footer.copyright == true %}
+  <ul class="grid__wrapper footer__bottom" style="--column-count: 1fr 2fr">
+    <li>{%- include "snippets/copyright.njk" -%}</li>
+    <li>
+        <ul>
+        {%- if menus.disclaimer -%}
+        {%- for item in menus.disclaimer -%}
+        <li>
+            <a href="{{ item.url | url }}" aria-label="{{ item.text }}"> {{ item.text }}</a>
+        </li>
+        {%- endfor -%}
+        {%- endif -%}
+        </ul>
+    </li>
+  </ul>
+  {% endif %}
 </footer>
 
 <script src="/static/scripts.js" defer></script>
 
 {% include "assets/inlineJS.njk" %}
+
+
+<style>
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__bottom  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+</style>
 

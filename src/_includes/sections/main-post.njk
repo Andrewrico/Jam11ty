@@ -1,34 +1,26 @@
 
 
-<article class="gird">
+<article class="grid__wrapper">
 
-    <div class="{{ 'pad-bottom-900' if not site.enableThirdPartyComments }}">
+    <div>
     {{ content | safe }}
     </div>
 
-    {% if site.enableThirdPartyComments %}
-    <hr />
-    <aside>
-        {% include "partials/global/third-party-comments.njk" %}
-    </aside>
-    {% endif %}
-
+    <aside></aside>
+    
     {% if tags %}
-    <footer class="">
-        <div class="">
-        <div class="">
-            <h2 class="">Filed under</h2>
-            <ul class="">
+    <footer>
+        <h3>Filed under</h3>
+        <ul>
             {% for item in tags %}
-                <li class="">
+            <li class="">
                 <a href="/tags/{{ item }}">{{ item }}</a>
-                </li>
+            </li>
             {% endfor %}
-            </ul>
-        </div>
-        </div>
+        </ul>
     </footer>
     {% endif %}
+
 </article>
 
 

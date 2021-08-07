@@ -2,8 +2,7 @@
 title: "Headless E-commerce"
 date: '2019-06-18'
 tags: 
- - posts
- - blog
+    - headless
 permalink: "/headless-ecommerce/"
 ---
 # Headless E-commerce

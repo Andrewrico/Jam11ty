@@ -1,18 +1,27 @@
-{# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-#
-#
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-{% set sectionId = "Image Collection" %}
-<section class="jam11ty-section{% if sectionId %}--{{- sectionId | lower | replace(' ', '-') -}}{% endif %} ">
-    <h2 class="grid__title">{{ sectionId }}</h2>
-    <ul class="grid__wrapper" style="--column-count: repeat(6, 1fr)">
-		{%- for item in metafields.brands -%}
-        <li class="grid__column">
-            {%- include "snippets/placeholder-image.njk" -%}
-        </li>
-      {%- endfor -%}
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set section = { 
+        title: 'Image Collection',
+        background: '',
+        color: '',
+        grid: '--column-count: repeat(6, 1fr)'   
+    }
+%}
+
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set wrapper %}
+  {%- for item in metafields.brands -%}
+    <li class="grid__column">
+        {%- include "snippets/placeholder-image.njk" -%}
+    </li>
+  {%- endfor -%}
+{% endset %}
+
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<section id="jam11ty-section-image-collection" class="section-image-collection" {% if section.background or section.color %} style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};"{% endif %}>
+    <ul class="grid__wrapper" style="{{ section.grid  }}">
+	   {{ wrapper | safe }} 
     </ul>
 </section>
-
 
 

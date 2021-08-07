@@ -2,8 +2,7 @@
 title: "Blogging with Netlify CMS"
 date: '2019-06-18'
 tags: 
- - posts
- - blog
+    - headless
 permalink: "/blogging-with-netlifycms/"
 ---
 # Blogging with Netlify CMS

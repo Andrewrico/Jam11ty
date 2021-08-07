@@ -1,35 +1,23 @@
-
-
-{# SET_SECTION_DATA :::::::::::::::::::::::::::::::: #}
 ---
 {
-    "templateName": "{{ title }}",
-    "loop":  [{
-        "key1": "value2",
-        },{
-        "key2": "value2",
-    }]
+    "template": "post"
 }
 ---
 
-{# SET_TEMPLATE :::::::::::::::::::::::::::::::::::::: #}
+{%- extends 'layouts/theme.njk' -%}
 
+{# ADD CONTENT :::::::::::::::::::::::::::::::::::::: #}
 {%- set content_for_banner -%}
-
+    {%- include "snippets/hero.njk" -%}
 {%- endset -%}
-
 {%- set content_for_main -%}
     {%- include "sections/main-post.njk" -%}
 {%- endset -%}
 
-{# GET_TEMPLATE :::::::::::::::::::::::::::::::::::::: #}
-
-{%- extends 'layouts/theme.njk' -%}
-
+{# SHOW CONTENT :::::::::::::::::::::::::::::::::::::: #}
 {% block content_for_banner %}
     {{ content_for_banner | safe }}
 {% endblock -%}
-
 {% block content_for_main %}
     {{ content_for_main | safe }}
 {% endblock %}

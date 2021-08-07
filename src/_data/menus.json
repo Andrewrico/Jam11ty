@@ -2,7 +2,7 @@
     "main": [{
         "text": "Home",
         "url": "/",
-        "external": true
+        "external": false
     }, {
         "text": "Blog",
         "url": "/blog",
@@ -10,60 +10,42 @@
     }, {
         "text": "Buy Now",
         "url": "/",
-        "external": true
-    }],
-    "secondary": [{
-        "text": "Home",
-        "url": "/",
-        "external": true
-    }, {
-        "text": "Blog",
-        "url": "/blog",
-        "external": false
-    }],
-    "tertiary": [{
-        "text": "Buy Now",
-        "url": "/",
-        "external": true
-    }, {
-        "text": "Blog",
-        "url": "/blog",
         "external": false
     }],
     "support": [{
-        "text": "Link 1",
-        "url": "/link-1",
-        "external": true
+        "text": "FAQ",
+        "url": "/faq",
+        "external": false
     }, {
-        "text": "Link 2",
-        "url": "/link-2",
+        "text": "Return Policy",
+        "url": "/Return-policy",
         "external": false
     }],
     "learn": [{
-        "text": "Link 1",
-        "url": "/link-1",
-        "external": true
+        "text": "Blog",
+        "url": "/blog",
+        "external": false
     }, {
-        "text": "Link 2",
-        "url": "/link-2",
+        "text": "Tutorials",
+        "url": "/tutorials",
         "external": false
     }],
     "social": [{
-        "text": "Link 1",
-        "url": "/link-1",
+        "text": "Facebook",
+        "url": "facebook.com",
         "external": true
     }, {
-        "text": "Link 2",
-        "url": "/link-2",
-        "external": false
+        "text": "Twitter",
+        "url": "twitter.com",
+        "external": true
     }],
-    "disclaimers": [{
-        "text": "Link 1",
-        "url": "/link-1",
-        "external": true
+    "disclaimer": [{
+        "text": "Term Of Use",
+        "url": "/term-of-use",
+        "external": false
     }, {
-        "text": "Link 2",
-        "url": "/link-2",
+        "text": "Privacy Policy",
+        "url": "/privacy-policy",
         "external": false
     }]
 }
