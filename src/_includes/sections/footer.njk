@@ -65,10 +65,6 @@
   {% endif %}
 </footer>
 
-{# WebComponents #}
-<script type="module" src="/static/webComponents/esm-side-drawer.min.js"></script>
-<script nomodule src="/static/webComponents/iife-side-drawer.min.js"></script>
-<script type="module" src="/static/webComponents/esm-wc-menu-button.js"></script>
 
 <script>
   (function loadSidedrawer() {
@@ -86,7 +82,7 @@
   })();
 </script>
 
-<script src="/static/scripts.js" defer></script>
+<script src="{{ site.url | url }}/static/scripts.js" defer></script>
 
 {% include "assets/inlineJS.njk" %}
 
