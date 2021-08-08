@@ -1,9 +1,8 @@
+<script type="module">import "./side-drawer"; </script>
 
-  
-
-<nav class="component-navbar" role="navigation" aria-label="{{ aria }}">
+<nav class="component-navbar navbar" role="navigation" aria-label="{{ aria }}">
   <ul class="navbar_wrapper">
-    <li class="navbar__logo">
+    <li class="logo">
       <h1>
         <a href="/">
           {% if theme.logo.img %}
@@ -14,9 +13,9 @@
         <a>
       </h1>
     </li>
-    <li class="navbar__menu">
+    <li class="menuList">
       {% if menus.main %}
-      <ul class="menu-primary">
+      <ul class="menu-1">
         {% for item in menus.main %}
           {% set relAttribute = '' %}
           {% set currentAttribute = '' %}
@@ -33,7 +32,7 @@
       </ul>
       {% endif %}
       {% if menus.secondary == false %}
-      <ul class="menu-secondary">
+      <ul class="menu-2">
         {% for item in menus.secondary %}
           {% set relAttribute = '' %}
           {% set currentAttribute = '' %}
@@ -50,7 +49,68 @@
       </ul>
       {% endif %}
       {% if menus.tertiary == false  %}
-      <ul class="menu-tertiary ">
+      <ul class="menu-3 ">
+        {% for item in menus.tertiary %}
+          {% set relAttribute = '' %}
+          {% set currentAttribute = '' %}
+          {% if item.rel %}
+            {% set relAttribute = ' rel="' + item.rel + '"' %}
+          {% endif %}
+          {% if page.url == item.url %}
+            {% set currentAttribute = ' aria-current="page"' %}
+          {% endif %}
+          <li>
+            <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+     <li class="hamburger">
+      <wc-menu-button id="menuButton"></wc-menu-button>
+    </li>
+  </ul>
+</nav> 
+
+<side-drawer id="drawer">
+  <ul class="drawer-container">
+    <li class="drawer__menu">
+      {% if menus.main %}
+      <ul class="menu-1">
+        {% for item in menus.main %}
+          {% set relAttribute = '' %}
+          {% set currentAttribute = '' %}
+          {% if item.rel %}
+            {% set relAttribute = ' rel="' + item.rel + '"' %}
+          {% endif %}
+          {% if page.url == item.url %}
+            {% set currentAttribute = ' aria-current="page"' %}
+          {% endif %}
+          <li>
+            <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if menus.secondary != false %}
+      <ul class="menu-2">
+        {% for item in menus.secondary %}
+          {% set relAttribute = '' %}
+          {% set currentAttribute = '' %}
+          {% if item.rel %}
+            {% set relAttribute = ' rel="' + item.rel + '"' %}
+          {% endif %}
+          {% if page.url == item.url %}
+            {% set currentAttribute = ' aria-current="page"' %}
+          {% endif %}
+          <li>
+            <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if menus.tertiary != false  %}
+      <ul class="menu-3">
         {% for item in menus.tertiary %}
           {% set relAttribute = '' %}
           {% set currentAttribute = '' %}
@@ -68,4 +128,4 @@
       {% endif %}
     </li>
   </ul>
-</nav>
+</side-drawer>

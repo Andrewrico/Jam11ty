@@ -13,11 +13,9 @@ const EXCLUDED_URLS = [
 
 // URLS that we want to be cached when the worker is installed  
 const PRE_CACHE_URLS = [
-  '/', 
-  '/static/app.js',
-  '/static/stylesheet.css',
-  '/fonts/OpenSans-Regular.ttf',
-  '/fonts/ArchivoBlack-Regular.ttf',
+  '/',
+  '/images/*',
+  '/static/*'
 ];
 
 // You might want to bypass a certain host
@@ -29,7 +27,7 @@ const IGNORED_HOSTS = ['localhost', 'unpkg.com', ];
  * @param {String} cacheName
  * @param {Array} items=[]
  */
-const addItemsToCache = function(cacheName, items = []) {
+const addItemsToCache = function (cacheName, items = []) {
   caches.open(cacheName).then(cache => cache.addAll(items));
 };
 
@@ -43,23 +41,25 @@ self.addEventListener('activate', evt => {
   // Look for any old caches that don't match our set and clear them out
   evt.waitUntil(
     caches
-      .keys()
-      .then(cacheNames => {
-        return cacheNames.filter(item => !Object.values(CACHE_KEYS).includes(item));
-      })
-      .then(itemsToDelete => {
-        return Promise.all(
-          itemsToDelete.map(item => {
-            return caches.delete(item);
-          })
-        );
-      })
-      .then(() => self.clients.claim())
+    .keys()
+    .then(cacheNames => {
+      return cacheNames.filter(item => !Object.values(CACHE_KEYS).includes(item));
+    })
+    .then(itemsToDelete => {
+      return Promise.all(
+        itemsToDelete.map(item => {
+          return caches.delete(item);
+        })
+      );
+    })
+    .then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', evt => {
-  const {hostname} = new URL(evt.request.url);
+  const {
+    hostname
+  } = new URL(evt.request.url);
 
   // Check we don't want to ignore this host
   if (IGNORED_HOSTS.indexOf(hostname) >= 0) {

@@ -6,7 +6,7 @@
         {%- include "sections/head.njk" -%}
 
         <style>
-      :root {
+        :root {
             --color-primary: var(--color-theme-primary);
             --color-secondary: var(--color-theme-secondary);
             --color-tertiary: var(--color-theme-tertiary);
@@ -72,9 +72,9 @@
         }
         </script>
 
-        <ul class="accesibilityList visually-hidden">
+        <ul class="accesibilityList">
             <li>
-                <a class="refresh" title="Refresh" href="/">{{- theme.metadata.accesibility.refresh_page | safe }}</a>
+                <a class="refresh" title="Refresh" href="{{ page.url | url }}">{{- theme.metadata.accesibility.refresh_page | safe }}</a>
             </li>
             <li>
                 <a class="scrollup" title="Scroll Up" href="#" > {{- theme.metadata.accesibility.scroll_up_page | safe }} </a>

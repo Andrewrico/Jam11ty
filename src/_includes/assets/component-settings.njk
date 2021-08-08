@@ -15,13 +15,13 @@
     --nav-menu-tertiary-align: {{ theme.nav.menu.tertiary.align }};
 }
 
-.component-navbar {
+.navbar {
     width:100%;
     padding:0;
     background: var(--nav-background);
 }
 
-.navbar_wrapper {
+.navbar .navbar_wrapper {
     margin:0 auto;
     width:100%;
 	  max-width: var(--theme-max-width, var(--nav-max-width));
@@ -32,14 +32,14 @@
 	  padding: var(--nav-padding) 0;
 }
 
-.navbar_wrapper a{
+.navbar a {
 	color: var(--nav-link-color);
 }
 
-.navbar__logo{
+.navbar .logo {
   flex: 1;
 }
-.navbar__logo h1 {
+.navbar .logo h1 {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
@@ -47,38 +47,86 @@
 	white-space: nowrap;
 }
 
-.navbar__menu {
+.navbar .menuList {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
     flex: 2;
 }
 
-.navbar_wrapper .navbar__menu ul{
+.navbar .menuList ul{
     width:100%;
     display:flex;
     align-items:center;
     gap:var(--nav-menu-gap);
 }
-.navbar__menu .menu-primary {
+.navbar .menuList .menu-1 {
   justify-content:var(--nav-menu-primary-align);
-
 }
 
-.navbar__menu .menu-secondary {
+.navbar .menuList .menu-2 {
   justify-content:var(--nav-menu-secondary-align);
 }
 
-.navbar__menu .menu-tertiary {
+.navbar .menuList .menu-3 {
   justify-content:var(--nav-menu-tertiary-align);
 }
 
-.navbar_wrapper .navbar__menu  a{
+.navbar .menuList  a{
 	color: var(--nav-menu-link-color);
 	font-size: var(--nav-menu-link-fontSize);
 	font-weight: var(--nav-menu-link-fontWeight);
 }
 
+
+/* navbar webcomponent  */
+
+.navbar .hamburger {
+  {# border: 1px solid white; #}
+}
+
+.navbar .menuList {
+    display: none;
+}
+
+@media(min-width: 768px) {
+  .navbar .hamburger  {
+    display: none;
+    border: 1px solid white;
+  }
+  .navbar .menuList {
+    display: block;
+  }
+}
+
+
+
+:root {
+  --wc-menu-button-color: var(--color-white);
+}
+side-drawer {
+   background-color: var(--color-secondary);
+  background-color: #ffffff;
+  color: inherit;
+  width: 350px;
+  max-width: 75vw;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+wc-menu-button {
+  width: 32px;
+}
+
+.drawer__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px;
+  font-size: 21px;
+  display: flex;
+  flex-direction: column;
+}
 
 
 

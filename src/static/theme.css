@@ -173,6 +173,20 @@ p {
 /* ========== SECTIONS END ============ */
 
 /* ========== FOOTER START ========== */
+.footer__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid #ddd;
+}
+
+.footer__bottom ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	width: 100%;
+}
 
 /* ========== FOOTER END ============ */
 
@@ -620,10 +634,6 @@ button {
 }
 
 
-/* section */
-
-
-
 /* link-arrow */
 
 .link {
@@ -641,4 +651,14 @@ button {
 .link:focus,
 .link:hover {
 	color: var(--color-link-state)
+}
+
+
+side-drawer {
+	background-color: #ffffff;
+	color: inherit;
+	width: 350px;
+	max-width: 75vw;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }

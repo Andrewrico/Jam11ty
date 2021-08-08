@@ -8,63 +8,26 @@ const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const CleanCSS = require("clean-css");
+const pluginPWA = require("eleventy-plugin-pwa");
 
-module.exports = function (config11ty) {
+module.exports = function (eleventyConfig) {
 
-    // Alias
-    config11ty.addLayoutAlias('homepage', 'template/index.njk');
-
-    config11ty.addTransform('htmlmin', htmlMinTransform);
-
-    // Passthrough
-    config11ty.addPassthroughCopy('src/robots.txt');
-    config11ty.addPassthroughCopy("src/images");
-    config11ty.addPassthroughCopy("src/static");
-    config11ty.addPassthroughCopy('src/admin/config.yml');
-    config11ty.addPassthroughCopy('src/admin/previews.js');
-    config11ty.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
-
-
-    const now = new Date();
-
-    // Custom collections
-    const livePosts = post => post.date <= now && !post.data.draft;
-    config11ty.addCollection('posts', collection => {
-        return [
-            ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
-        ].reverse();
+    // Plugins
+    eleventyConfig.addPlugin(pluginPWA, {
+        swDest: "./build/sw.js",
+        globDirectory: "./build"
     });
+    eleventyConfig.addPlugin(rssPlugin);
+    eleventyConfig.addPlugin(syntaxHighlight);
 
-    config11ty.addCollection('postFeed', collection => {
-        return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
-            .reverse()
-            .slice(0, site.maxPostsPerPage);
-    });
-
-    // Plugin
-    config11ty.addPlugin(rssPlugin);
-    config11ty.addPlugin(syntaxHighlight);
-
-    // config11ty.setBrowserSyncConfig({
-    //   callbacks: {
-    //     ready: function (err, browserSync) {
-    //       const content_404 = fs.readFileSync('dist/404.html');
-    //       browserSync.addMiddleware("*", (req, res) => {
-    //         res.write(content_404);
-    //         res.end();
-    //       });
-    //     }
-    //   }
-    // });
-
-    // FILTERS
-    config11ty.addFilter('dateFilter', dateFilter);
-    config11ty.addFilter('markdownFilter', markdownFilter);
-    config11ty.addFilter('w3DateFilter', w3DateFilter);
-    config11ty.addFilter("cssmin", function (code) {
+    // Filters
+    eleventyConfig.addFilter('dateFilter', dateFilter);
+    eleventyConfig.addFilter('markdownFilter', markdownFilter);
+    eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
+    eleventyConfig.addFilter("cssmin", function (code) {
         return new CleanCSS({}).minify(code).styles;
     });
-    config11ty.addFilter("jsmin", function (code) {
+    eleventyConfig.addFilter("jsmin", function (code) {
         let minified = Terser.minify(code);
         if (minified.error) {
             console.log("Terser error: ", minified.error);
@@ -73,7 +36,37 @@ module.exports = function (config11ty) {
         return minified.code;
     });
 
-    // directories output 
+    // Aliases
+    eleventyConfig.addLayoutAlias('homepage', 'template/index.njk');
+    eleventyConfig.addLayoutAlias('blog', 'template/blog.njk');
+
+    // Helpers
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+
+    // Pass throughs
+    eleventyConfig.addPassthroughCopy('src/robots.txt');
+    eleventyConfig.addPassthroughCopy("src/images");
+    eleventyConfig.addPassthroughCopy("src/static");
+    eleventyConfig.addPassthroughCopy('src/admin/config.yml');
+    eleventyConfig.addPassthroughCopy('src/admin/previews.js');
+    eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
+
+    // Post Collection
+    const now = new Date();
+    const livePosts = post => post.date <= now && !post.data.draft;
+    eleventyConfig.addCollection('posts', collection => {
+        return [
+            ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
+        ].reverse();
+    });
+
+    eleventyConfig.addCollection('postFeed', collection => {
+        return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
+            .reverse()
+            .slice(0, site.maxPostsPerPage);
+    });
+
+    // Directories 
     return {
         dir: {
             input: "src",

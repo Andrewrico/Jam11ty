@@ -1,6 +1,7 @@
 ---
-title: "Headless E-commerce"
 date: '2019-06-18'
+title: "Headless E-commerce"
+name: 'Headless' 
 tags: 
     - headless
 permalink: "/headless-ecommerce/"

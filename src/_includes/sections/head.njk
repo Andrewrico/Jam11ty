@@ -2,57 +2,48 @@
 
 {% include "snippets/metadata.njk" %}
 
-<link rel="preload" href="/static/theme.css" as="style">
+{# Site Metadata #}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="theme-color" content="#0000000">
+<title>{{- pageTitle -}}</title>
+<meta name="description" content="{{ pageDesc }}" />
+<link rel="canonical" href="{{ currentUrl }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+<link rel="icon" href="/static/favicon.ico" type="image/png"/>
 
+{# PWA #}
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="apple-touch-icon" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="167x167" href="images/placeholder.png">
+
+{# Social #}
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+<meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+<meta name="description" content="{{ metaDesc }}" />
+<meta name="twitter:description" content="{{ metaDesc }}" />
+<meta property="og:description" content="{{ metaDesc }}" />
+<meta property="og:image" content="{{ socialImage }}" />
+<meta name="twitter:image" content="{{ socialImage }}" />
+<meta property="og:image:alt" content="Page image for {{ site.name }}" />
+<meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+
+{# Load Assets #}
+<link rel="preload" href="/static/theme.ttf" type="font/ttf" as="font" >
+<link rel="preload" href="/static/theme.css" type="text/css" as="style" >
+<link rel="preload" href="/static/stylesheet.css" type="text/css" as="style">
 <link rel="stylesheet" href="/static/theme.css" media="print" onload="this.media='all'">
-
-<noscript><link rel="stylesheet" href="/static/theme.css" media="all"></noscript>
-
-<link rel="preload" href="/static/stylesheet.css" as="style">
-
 <link rel="stylesheet" href="/static/stylesheet.css" media="print" onload="this.media='all'">
-
+<noscript><link rel="stylesheet" href="/static/theme.css" media="all"></noscript>
 <noscript><link rel="stylesheet" href="/static/stylesheet.css" media="all"></noscript>
 
-{% include "assets/css-variables.njk" %}
-
+{# Include Assets #}
 {% include "assets/inlineCSS.njk" %}
-
 {% include "snippets/globals.njk" %}
-
 {% include "snippets/schema.njk" %}
-
-
-
-{#  
-
-<link rel="stylesheet" href="{{ 'component-list-menu.css' }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
-<style>
-    {{ settings.type_body_font | font_face: font_display: 'swap' }}
-    {{ body_font_bold | font_face: font_display: 'swap' }}
-    {{ body_font_italic | font_face: font_display: 'swap' }}
-    {{ body_font_bold_italic | font_face: font_display: 'swap' }}
-    {{ settings.type_header_font | font_face: font_display: 'swap' }}
-    :root {
-    --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-    --font-body-style: {{ settings.type_body_font.style }};
-    --font-body-weight: {{ settings.type_body_font.weight }};
-    }
-</style>
-
-{%- unless settings.fonts.type_body_font -%}
-    <link rel="preload" as="font" href="{{ settings.fonts.type_body_font | font_url }}" type="font/woff2" crossorigin>
-{%- endunless -%}
-
-{%- unless settings.fonts.type_header_font -%}
-    <link rel="preload" as="font" href="{{ settings.fonts.type_header_font | font_url }}" type="font/woff2" crossorigin>
-{%- endunless -%}
-#}
-

@@ -1,4 +1,5 @@
 console.log("file location: static/theme.js")
+// Side Drawer
 
 // Options docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
 const options = {

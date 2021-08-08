@@ -1,6 +1,6 @@
 {
 
-  "metafieldName": "metafieldValue",
+  "metafieldKey": "metafieldValue",
   "card": [{
     "headline": "Card One",
     "desciption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "

@@ -1,6 +1,7 @@
 ---
-title: "Blogging with Netlify CMS"
 date: '2019-06-18'
+title: "Blogging with Netlify CMS"
+name: 'Headless' 
 tags: 
     - headless
 permalink: "/blogging-with-netlifycms/"
