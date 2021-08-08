@@ -1,0 +1,20 @@
+{
+    "name": "Jam 11ty",
+    "short_name": "11ty Started Theme",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2A3443",
+    "description": "Jam 11ty - Ecommerce",
+    "theme_color": "#2A3443",
+    "icons": [{
+            "src": "/images/placeholder.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/placeholder.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

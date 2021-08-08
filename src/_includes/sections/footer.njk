@@ -1,6 +1,6 @@
 <footer class="component-footer" role="contentinfo" aria-label="{{ aria }}">
   {% if theme.footer.wrapper == true %}
-  <ul class="grid__wrapper footer__top" style="--column-count: repeat(4, 1fr)">
+  <ul class="grid__wrapper footer__top" style="--column-count: repeat(4, 1fr); padding: 3rem 0;">
     <li>
         <ul>
         {%- if menus.main -%}
@@ -65,23 +65,28 @@
   {% endif %}
 </footer>
 
+{# WebComponents #}
+<script type="module" src="/static/webComponents/esm-side-drawer.min.js"></script>
+<script nomodule src="/static/webComponents/iife-side-drawer.min.js"></script>
+<script type="module" src="/static/webComponents/esm-wc-menu-button.js"></script>
+
+<script>
+  (function loadSidedrawer() {
+    const menuButton = document.getElementById("menuButton");
+    const drawer = document.querySelector("#drawer");
+    menuButton.addEventListener("opened", ev => {
+      drawer.open = true;
+    });
+    drawer.addEventListener("open", ev => {
+      menuButton.open = true;
+    });
+    drawer.addEventListener("close", ev => {
+      menuButton.open = false;
+    });
+  })();
+</script>
+
 <script src="/static/scripts.js" defer></script>
 
 {% include "assets/inlineJS.njk" %}
-
-
-<style>
-.footer__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer__bottom  ul {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-}
-</style>
 

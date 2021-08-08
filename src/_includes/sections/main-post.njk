@@ -2,11 +2,9 @@
 
 <article class="grid__wrapper">
 
-    <div>
-    {{ content | safe }}
-    </div>
+    <main>{{ content | safe }}</main>
 
-    <aside></aside>
+    <aside>SIDEBAR</aside>
     
     {% if tags %}
     <footer>
@@ -14,7 +12,7 @@
         <ul>
             {% for item in tags %}
             <li class="">
-                <a href="/tags/{{ item }}">{{ item }}</a>
+                <a href="/tags/{{ tags }}">{{ tags }}</a>
             </li>
             {% endfor %}
         </ul>
