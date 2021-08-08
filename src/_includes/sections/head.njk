@@ -11,14 +11,14 @@
 <meta name="description" content="{{ pageDesc }}" />
 <link rel="canonical" href="{{ currentUrl }}" />
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
-<link rel="icon" href="{{ site.url | url }}/static/favicon.ico" type="image/png"/>
+<link rel="icon" href="/static/favicon.ico" type="image/png"/>
 
 {# PWA #}
-<link rel="manifest" href="{{ site.url | url }}/manifest.webmanifest" />
-<link rel="apple-touch-icon" href="{{ site.url | url }}/images/placeholder.png">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ site.url | url }}/images/placeholder.png">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url | url }}/images/placeholder.png">
-<link rel="apple-touch-icon" sizes="167x167" href="{{ site.url | url }}/images/placeholder.png">
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="apple-touch-icon" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/placeholder.png">
+<link rel="apple-touch-icon" sizes="167x167" href="images/placeholder.png">
 
 {# Social #}
 <meta property="og:site_name" content="{{ siteTitle }}" />
@@ -35,13 +35,13 @@
 <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 
 {# Load Assets #}
-<link rel="preload" href="{{ site.url | url }}/static/theme.ttf" type="font/ttf" as="font" >
-<link rel="preload" href="{{ site.url | url }}/static/theme.css" type="text/css" as="style" >
-<link rel="preload" href="{{ site.url | url }}/static/stylesheet.css" type="text/css" as="style">
-<link rel="stylesheet" href="{{ site.url | url }}/static/theme.css" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ site.url | url }}/static/stylesheet.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="{{ site.url | url }}/static/theme.css" media="all"></noscript>
-<noscript><link rel="stylesheet" href="{{ site.url | url }}/static/stylesheet.css" media="all"></noscript>
+<link rel="preload" href="/static/theme.ttf" type="font/ttf" as="font" >
+<link rel="preload" href="/static/theme.css" type="text/css" as="style" >
+<link rel="preload" href="/static/stylesheet.css" type="text/css" as="style">
+<link rel="stylesheet" href="/static/theme.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/static/stylesheet.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/static/theme.css" media="all"></noscript>
+<noscript><link rel="stylesheet" href="/static/stylesheet.css" media="all"></noscript>
 
 {# Include Assets #}
 {% include "assets/inlineCSS.njk" %}
@@ -49,6 +49,9 @@
 {% include "snippets/schema.njk" %}
 
 {# WebComponents #}
-<script type="module" src="{{ site.url | url }}/static/webComponents/esm-side-drawer.min.js"></script>
-<script nomodule src="{{ site.url | url }}/static/webComponents/iife-side-drawer.min.js"></script>
-<script type="module" src="{{ site.url | url }}/static/webComponents/esm-wc-menu-button.js"></script>
+<script type="module" src="/static/webComponents/esm-side-drawer.min.js"></script>
+<script nomodule src="/static/webComponents/iife-side-drawer.min.js"></script>
+<script type="module" src="/static/webComponents/esm-wc-menu-button.js"></script>
+
+
+
