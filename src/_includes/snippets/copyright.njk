@@ -1,8 +1,19 @@
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set copyright = { 
+        color: '#00000'
+    }
+%}
+
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
 <div class="copyright">
     <small> 
         <span>©<span id="currentYear"></span></span> 
         <span>Copyright {{ site.name }}. MIT License.</span> 
     </small>
 </div>
-
 <script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+{% endset %}
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{{ content | safe }} 

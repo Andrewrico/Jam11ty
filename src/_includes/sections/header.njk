@@ -1,3 +1,38 @@
-<header class="component-header" role="banner" aria-label="{{ aria }}">
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{%- set header = {       
+        aria: 'header',
+        background: '#000000',
+        color: '#FFF',
+        linkColor: '#FFF',
+        padding: "2rem"
+    }
+-%}
+
+{# Styles ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<style>
+#header {
+    --header-padding: {{ header.padding }};
+    --header-background: {{ header.background }};
+    --header-text-color: {{ header.color }};
+    --header-link-color: {{ header.linkColor }};
+	padding: var(--header-padding) 0;
+    background: var(--header-background) ;
+}
+
+#header * {
+    color: var(--header-text-color);
+}
+#header a {
+    color: var(--header-link-color);
+}
+</style>
+
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<header id="header" role="banner" aria-label="{{ header.aria }}"
+{% if header.background or header.color or header.linkColor or header.padding %}
+  style="--header-background: {{ header.background }};--header-text-color: {{ header.color }}; --header-link-color: {{ header.linkColor }}; --header-padding: {{ header.padding }};
+{% endif %}"
+>
     {{ content_for_banner | safe }}
 </header>

@@ -37,45 +37,8 @@
         "shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(235, 235, 235, 0.24)"
     },
     "layout": {
-        "max_width": "1268px",
-        "gap": "16px"
-    },
-    "nav": {
-        "background": "black",
-        "color": "white",
-        "padding": "2rem",
-        "maxWidth": "",
-        "justify": "space-between",
-        "menu": {
-            "color": "white",
-            "fontSize": "24px",
-            "fontWeight": "bold",
-            "gap": "2rem",
-            "primary": {
-                "align": "flex-end"
-            },
-            "secondary": {
-                "align": "center"
-            },
-            "tertiary": {
-                "align": "center"
-            }
-        }
-    },
-    "header": {
-        "background": "black",
-        "color": "white",
-        "linkColor": "white",
-        "padding": "2rem"
-    },
-    "main": {
-        "backgroundColor": "#262626"
-    },
-    "footer": {
-        "wrapper": true,
-        "copyright": true,
-        "padding": "2rem",
-        "background": "var(--color-black)",
-        "color": "white"
+        "max_width": "1366px",
+        "gap": "1rem"
     }
+
 }

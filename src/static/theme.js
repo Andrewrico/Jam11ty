@@ -1,5 +1,5 @@
 console.log("file location: static/theme.js")
-// Side Drawer
+
 
 // Options docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
 const options = {
@@ -7,6 +7,7 @@ const options = {
     rootMargin: '0px', // % or px - offsets added to each side of the intersection 
     threshold: 0.5 // percentage of the target element which is visible
 }
+
 // Callback docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Targeting_an_element_to_be_observed
 let callback = (entries) => {
     entries.forEach(entry => {
@@ -20,6 +21,7 @@ let callback = (entries) => {
         }
     });
 }
+
 // Create the intersection observer instance by calling its constructor and passing it a
 // callback function to be run whenever a threshold is crossed in one direction or the other:
 let observer = new IntersectionObserver(callback, options);
@@ -28,7 +30,7 @@ document.querySelectorAll('.onscroll').forEach(interceptor => {
     observer.observe(interceptor)
 });
 
-// LAZYLOAD
+// Lazyload
 document.addEventListener("DOMContentLoaded", function () {
     const imageObserver = new IntersectionObserver((entries, imgObserver) => {
         entries.forEach((entry) => {
@@ -48,9 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-// NAV
-
-// const pageId = document.querySelectorAll('header nav ul li a');
-// Array.from(navbarlinks).forEach(function (navbarlink, i) {
-// 	navbarlink.setAttribute("aria-current", 'current' + (i + 1));
-// });
+// Navbar links
+const pageId = document.querySelectorAll('.navbar ul li a');
+Array.from(navbarlinks).forEach(function (navbarlink, i) {
+	navbarlink.setAttribute("aria-current", 'current' + (i + 1));
+});

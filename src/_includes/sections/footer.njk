@@ -1,5 +1,54 @@
-<footer class="component-footer" role="contentinfo" aria-label="{{ aria }}">
-  {% if theme.footer.wrapper == true %}
+
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{%- set footer = {       
+        aria: 'footer',
+        background: '#000000',
+        color: '#FFF',
+        linkColor: '#FFF',
+        wrapper: true,
+        wrapper_grid: '--column-count: repeat(3, 1fr)',
+        copyright: true,
+        padding: "2rem"
+    }
+-%}
+
+{# Styles ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<style>
+#footer {
+    --footer-padding: {{ footer.padding }};
+    --footer-background: {{ footer.background }};
+    --footer-text-color: {{ footer.color }};
+    --footer-link-color: {{ footer.linkColor }};
+	  padding: var(--footer-padding) 0;
+    background: var(--footer-background) ;
+}
+
+#footer * {
+    color: var(--footer-text-color);
+}
+#footer a {
+    color: var(--footer-link-color);
+}
+
+.footer__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid #ddd;
+}
+
+.footer__bottom ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	width: 100%;
+}
+</style>
+
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
+  {% if footer.wrapper == true %}
   <ul class="grid__wrapper footer__top" style="--column-count: repeat(4, 1fr); padding: 3rem 0;">
     <li>
         <ul>
@@ -47,9 +96,12 @@
     </li>
   </ul>
   {% endif %}
-  {% if theme.footer.copyright == true %}
+  
+  {% if footer.copyright == true %}
   <ul class="grid__wrapper footer__bottom" style="--column-count: 1fr 2fr">
-    <li>{%- include "snippets/copyright.njk" -%}</li>
+    <li>
+      {%- include "snippets/copyright.njk" -%}
+    </li>
     <li>
         <ul>
         {%- if menus.disclaimer -%}
@@ -63,28 +115,16 @@
     </li>
   </ul>
   {% endif %}
+{% endset %}
+
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+<footer id="footer" role="contentinfo" aria-label="{{ footer.aria }}" 
+{% if footer.background or footer.color or footer.linkColor or footer.padding %}
+  style="--footer-background: {{ footer.background }};--footer-text-color: {{ footer.color }}; --footer-link-color: {{ footer.linkColor }}; --footer-padding: {{ footer.padding }};
+{% endif %}">
+  {{ content | safe }} 
 </footer>
-
-{# WebComponents #}
-<script type="module" src="/static/webComponents/esm-side-drawer.min.js"></script>
-<script nomodule src="/static/webComponents/iife-side-drawer.min.js"></script>
-<script type="module" src="/static/webComponents/esm-wc-menu-button.js"></script>
-
-<script>
-  (function loadSidedrawer() {
-    const menuButton = document.getElementById("menuButton");
-    const drawer = document.querySelector("#drawer");
-    menuButton.addEventListener("opened", ev => {
-      drawer.open = true;
-    });
-    drawer.addEventListener("open", ev => {
-      menuButton.open = true;
-    });
-    drawer.addEventListener("close", ev => {
-      menuButton.open = false;
-    });
-  })();
-</script>
 
 <script src="/static/scripts.js" defer></script>
 

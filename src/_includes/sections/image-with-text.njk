@@ -23,7 +23,7 @@
 
 
 {# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-<section id="jam11ty-section-image-with-text" class="section-image-with-text" {% if section.background or section.color %} style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};"{% endif %}>
+<section id="section-image-with-text" class="section-image-with-text" {% if section.background or section.color %} style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};"{% endif %}>
     <ul class="grid__wrapper" style="{{ section.grid  }}">
 	   {{ wrapper | safe }} 
     </ul>

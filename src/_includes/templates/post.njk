@@ -1,12 +1,10 @@
 ---
-{
-    "template": "post"
-}
+name: "post"
 ---
 
 {%- extends 'layouts/theme.njk' -%}
 
-{# ADD CONTENT :::::::::::::::::::::::::::::::::::::: #}
+{# Build :::::::::::::::::::::::::::::::::::::: #}
 {%- set content_for_banner -%}
     {%- include "snippets/hero.njk" -%}
 {%- endset -%}
@@ -14,15 +12,10 @@
     {%- include "sections/main-post.njk" -%}
 {%- endset -%}
 
-{# SHOW CONTENT :::::::::::::::::::::::::::::::::::::: #}
+{# Display :::::::::::::::::::::::::::::::::::::: #}
 {% block content_for_banner %}
     {{ content_for_banner | safe }}
 {% endblock -%}
 {% block content_for_main %}
     {{ content_for_main | safe }}
 {% endblock %}
-
-
-
-
-

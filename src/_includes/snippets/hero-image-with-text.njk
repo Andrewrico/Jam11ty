@@ -1,4 +1,13 @@
-<ul class="grid__wrapper" style="--column-count: 1fr 1fr;">
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set hero = { 
+        color: '#00000',
+        grid: '--column-count: repeat(2, 1fr)'
+    }
+%}
+
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
+<ul class="grid__wrapper" style="{{ hero.grid }}">
     <li class="grid__column">
         {%- include "snippets/placeholder-cta.njk" -%}
     </li>
@@ -6,3 +15,7 @@
         {%- include "snippets/placeholder-image.njk" -%}
     </li>
 </ul>
+{% endset %}
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{{ content | safe }} 

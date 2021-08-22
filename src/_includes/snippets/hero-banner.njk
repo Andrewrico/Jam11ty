@@ -1,24 +1,21 @@
-{# :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-#
-#  
-#  
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set hero = { 
+        color: '#00000',
+        grid: '--column-count: repeat(2, 1fr)'
+    }
+%}
 
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
+<ul class="grid__wrapper" style="{{ hero.grid }}">
+    <li class="grid__column">
+        {%- include "snippets/placeholder-text.njk" -%}
+    </li>
+    <li class="grid__column">
+        {%- include "snippets/placeholder-image.njk" -%}
+    </li>
+</ul>
+{% endset %}
 
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-
-<div class="jam11ty-section jam11ty-section-{{ sectionId }}">
-    <ul class="grid" style="--column-count: 1fr 1fr">
-        <li class="grid__column">
-            <div class="grid__cell">
-            {%- include "snippets/placeholder-text.njk" -%}
-            </div>
-        </li>
-        <li class="grid__column">
-            <div class="grid__cell">
-            {%- include "snippets/placeholder-image.njk" -%}
-            </div>
-        </li>
-    </ul>
-</div>
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{{ content | safe }} 

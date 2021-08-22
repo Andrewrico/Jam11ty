@@ -3,13 +3,13 @@
         title: 'Card Collection',
         background: 'var(--color-black)',
         color: 'white',
-        itemcolor: 'black',
+        linkColor: 'black',
         grid: '--column-count: repeat(3, 1fr)'   
     }
 -%}
 
 {# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-{% set wrapper %}
+{% set content %}
     {%- for item in metafields.card -%}
     <li class="grid__column">
         <div class="card">
@@ -22,11 +22,11 @@
 {% endset %}
 
 {# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
-<section id="jam11ty-section-card-collection" class="section-card-collection" {% if section.background or section.color %}style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};{% endif %}">
+<section id="section-card-collection" class="section-card-collection" {% if section.background or section.color %}style="--section-background: {{ section.background | safe }};--section-color: {{ section.color | safe }};{% endif %}">
     <h2 class="grid__title">
       <span>{{ section.title  }}</span>
     </h2>
     <ul class="grid__wrapper" style="{{ section.grid  }}">
-	   {{ wrapper | safe }} 
+	   {{ content | safe }} 
     </ul>
 </section>

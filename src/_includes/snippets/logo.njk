@@ -1,5 +1,20 @@
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set logo = { 
+        color: '#00000'
+    }
+%}
 
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
 <a href="/">
+{% if logoImg %}
     <img class="logo" src="/images/logo.png"  alt="{{- site.name -}} Logo" title="{{- site.name -}} Logo" width="300">
+{% else %}
+    <span>{{- site.name -}}</span>
+{% endif %}
 </a>
-<a href="/"><span>{{- site.name -}}</span></a>
+
+{% endset %}
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{{ content | safe }} 

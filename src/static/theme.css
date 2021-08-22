@@ -1,4 +1,3 @@
-/* ========== GLOBAL START ========== */
 *,
 *::before,
 *::after {
@@ -28,15 +27,15 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	margin: 0;
-	font-family: "Jam11ty";
-	background: #FFF;
+	font-family: "theme sans-serif";	
+	background: transparent;
 	color: #000000;
 }
 
 @font-face {
-	font-family: 'Jam11ty';
+	font-family: 'theme sans-serif';
 	font-style: normal;
-	src: url('./theme.ttf');
+	src: url('./font.ttf');
 	text-rendering: optimizeLegibility;
 	font-display: swap;
 }
@@ -147,21 +146,6 @@ p {
 	left: 0;
 }
 
-
-/* ========== GLOBAL END ============ */
-
-
-/* ========== HEADER START ========== */
-
-/* .header {
-	background: var(--color-secondary);
-} */
-
-
-/* ========== HEADER END ============ */
-
-/* ========== SECTIONS START ========== */
-/* Hero */
 .hero_content {
 	display: flex;
 	justify-content: space-around;
@@ -170,39 +154,16 @@ p {
 	gap: 2rem
 }
 
-/* ========== SECTIONS END ============ */
-
-/* ========== FOOTER START ========== */
-.footer__bottom {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	border-top: 1px solid #ddd;
-}
-
-.footer__bottom ul {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 1rem;
-	width: 100%;
-}
-
-/* ========== FOOTER END ============ */
-
 /* ========== HELPERS START ========== */
-span[super] {
-	/* gen */
+/* [style] {
 	--display: inherit;
 	--justify: inherit;
-	/* flexbox */
 	--align-items: inherit;
 	--justify-content: inherit;
 	--direction: inherit;
 	--flow: inherit;
 	--basis: inherit;
 	--gap: inherit;
-	/* size */
 	--min-height: inherit;
 	--max-height: inherit;
 	--height: inherit;
@@ -219,25 +180,19 @@ span[super] {
 	--margin-bottom: inherit;
 	--margin-right: inherit;
 	--margin-left: inherit;
-	/* colors */
 	--background: inherit;
 	--color: inherit;
-	/* typo */
 	--font-size: inherit;
 	--font-weight: inherit;
 	--letter-spacing: inherit;
-
-	/* gen */
 	display: var(--display);
 	text-align: var(--justify);
-	/* flexbox */
 	align-items: var(--align-items);
 	justify-content: var(--justify-content);
 	flex-direction: var(--direction);
 	flex-flow: var(--flow);
 	flex-basis: var(--basis);
 	gap: var(--gap);
-	/* size */
 	min-height: var(--min-height);
 	max-height: var(--max-height);
 	height: var(--height);
@@ -254,14 +209,12 @@ span[super] {
 	margin-bottom: var(--margin-bottom);
 	margin-right: var(--margin-right);
 	margin-left: var(--margin-left);
-	/* colors */
 	background: var(--background);
 	color: var(--color);
-	/* typo */
 	font-size: var(--font-size);
 	font-weight: var(--font-weight);
 	letter-spacing: var(--letter-spacing);
-}
+} */
 
 
 .card {
@@ -281,30 +234,10 @@ span[super] {
 	padding: 0;
 }
 
-/* ========== HELPERS END ============ */
-
 
 
 
 /* ========== GRID START ========== */
-
-/* Grid */
-/* [class*="section-"] {
-	--padding: 4rem;
-	--background: unset;
-	--text-color: unset;
-	padding: var(--padding) 0;
-	background: var(--background);
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-[class*="jam11ty-section"] * {
-	color: var(--text-color);
-} */
-
-
 .grid__title {
 	text-align: center;
 }
@@ -451,7 +384,7 @@ span[super] {
 	}
 }
 
-/* ========== GRID END ============ */
+
 
 /* ========== BUTTON END ============ */
 button {
@@ -498,10 +431,14 @@ button {
 
 /* ========== BUTTON END ============ */
 
+
+
+
+
 .view__jam11ty {
 	width: 100%;
 	align-items: center;
-	justify-content: centern;
+	justify-content: center;
 }
 
 .view__jam11ty ul {
@@ -548,10 +485,6 @@ button {
 	background: var(--color-secondary);
 }
 
-
-
-
-
 .jam11ty-title {
 	font-size: 80px;
 	margin: 0;
@@ -577,7 +510,7 @@ button {
 .image-placeholder>span {
 	height: 100%;
 	width: 100%;
-	background: url(./mountains.svg);
+	background: url(./placeholder.svg);
 	background-position: center;
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
@@ -615,15 +548,12 @@ button {
 	margin-right: auto;
 }
 
-
 .nav-logo h1 {
 	font-size: 24px;
 	margin: 0;
 	padding: 0;
 } */
 
-
-/* accesibility */
 .accesibilityList {
 	position: fixed;
 	right: 0;
@@ -632,9 +562,6 @@ button {
 	align-items: center;
 	gap: 1rem;
 }
-
-
-/* link-arrow */
 
 .link {
 	display: inline-flex;
@@ -652,7 +579,6 @@ button {
 .link:hover {
 	color: var(--color-link-state)
 }
-
 
 side-drawer {
 	background-color: #ffffff;

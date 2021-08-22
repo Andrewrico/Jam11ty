@@ -1,0 +1,21 @@
+---
+name: "get-quote"
+---
+
+{%- extends 'layouts/theme.njk' -%}
+
+{# Build :::::::::::::::::::::::::::::::::::::: #}
+{%- set content_for_banner -%}
+    {%- include "snippets/hero.njk" -%}
+{%- endset -%}
+{%- set content_for_main -%}
+    {%- include "sections/main-page.njk" -%}
+{%- endset -%}
+
+{# Display :::::::::::::::::::::::::::::::::::::: #}
+{% block content_for_banner %}
+    {{ content_for_banner | safe }}
+{% endblock -%}
+{% block content_for_main %}
+    {{ content_for_main | safe }}
+{% endblock %}

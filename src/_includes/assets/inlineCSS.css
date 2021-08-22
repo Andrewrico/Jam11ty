@@ -1,3 +1,17 @@
+[id*="section-"] {
+    --section-padding: {{ section.padding  }};
+    --section-background: {{ section.background  }};
+    --section-color: {{ section.color  }};
+    --section-item-color: {{ section.linkcolor  }};
+    padding: var(--section-padding, 4rem) 0;
+    background: var(--section-background);
+    color: var(--section-color);
+  }
+  
+  [id*="section-"] *{
+      color: var(--section-color);
+  }
+
 /* .button_primary {
     background: var(--color-primary-darken);
     color: var(--color-black);
@@ -178,3 +192,9 @@ a[id='page-{{id}}'] {
     transition: all 1s;
     border-bottom: 2px solid var(--color-primary) !important;
 } */
+
+
+
+
+/* sections  */
+

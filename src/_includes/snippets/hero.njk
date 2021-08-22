@@ -1,5 +1,18 @@
-<ul class="hero grid__wrapper" style="--column-count: 1fr">
+{# Settings ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set hero = { 
+        color: '#00000',
+        grid: '--column-count: repeat(1, 1fr)'
+    }
+%}
+
+{# Content ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{% set content %}
+<ul class="hero grid__wrapper" style="{{ hero.grid }}">
     <li class="grid__column">
-        <h1> {{ name }} </h1>
+        <h1> {{ title }} </h1>
     </li>
 </ul>
+{% endset %}
+
+{# Template ::::::::::::::::::::::::::::::::::::::::::::::::::: #}
+{{ content | safe }} 
